@@ -5,6 +5,9 @@
 1. [How do create a new partner?](#How-do-i-create-a-new-partner?)
 1. [How to create a new order?](#How-do-i-create-a-new-partner?)
 1. [How to create a new invoice?](#How-do-i-create-a-new-partner?)
+1. [How do i get my app approved?](#How-do-i-create-a-new-partner?)
+1. [Can i get access to a test version of Xena?](#How-do-i-create-a-new-partner?)
+1. [How do i get money for my app?](#How-do-i-create-a-new-partner?)
 
 
 

@@ -10,4 +10,5 @@
 * [Resources](Resources.md)
   * [Forum](Resources/Forum.md)
   * [Swagger API](Resources/Swagger.md)
+  * [FAQs](Resources/FAQs.md)
 

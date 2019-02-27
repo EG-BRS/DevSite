@@ -6,6 +6,7 @@
   * [Quick Start JavaScript](README.md)
 * [Fundamental](Fundamentals.md)
   * [Authorization](Fundamentals/Authorization.md)
+  * [Install Xena Developer app](Fundamentals/InstallXenaDeveloper.md)  
   * [Register app](Fundamentals/CreateApplication.md)
   * [Create oauth client](Fundamentals/DeveloperConsole.md)
 * [Resources](Resources.md)

@@ -43,4 +43,6 @@ Standard identtiy scopes
 | offline_access | returns a refresh token  |
 
 
+## Service account
 
+The Xena identity server does support a method for server to server interaction.  We call this service accounts.  Service accounts are pre-authorized in the backend on the identity server.  This means that service accounts allow you to impersonate a single user without the need for consent authorization.  Currently the Last developer console does not allow you to create your own service account.  You can contact us and we would be happy discuss creating one for your appication.

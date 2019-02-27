@@ -26,15 +26,6 @@ The following general process applies to all application types:
 
 Here's the OAuth 2.0 scope information for the Xena API:
 
-- testapi - Access to the Xena API
-
-Standard identtiy scopes
-
-- profile - User profile information not email
-- email   - users email
-- offline_access - returns refresh token.
-
-
 | Scope          | Meaning |
 | -------------  | ------------- |
 | testapi        | Full, permissive scope to access all of a user's Xena data.  |

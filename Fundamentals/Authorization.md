@@ -8,7 +8,7 @@ Every request your application sends to the Xena API must include an authorizati
 
 Your application must use OAuth 2.0 to authorize requests. No other authorization protocols are supported.
 
-# Authorizing requests with OAuth 2.0
+## Authorizing requests with OAuth 2.0
 
 All requests to the Xena API must be authorized by an authenticated user.
 

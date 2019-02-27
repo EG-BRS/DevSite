@@ -24,7 +24,7 @@ The following general process applies to all application types:
 6. If Xena's api determines that your request and the token are valid, it returns the requested data.
 7. Some flows include additional steps, such as using refresh tokens to acquire new access tokens. For detailed information about flows for various types of applications, see [Xena's OAuth 2.0 documentation](Oauth2hybrid).
 
-Here's the OAuth 2.0 scope information for the Xena API:
+Here is a list of the OAuth 2.0 scopes for the Xena API:
 
 | Scope          | Meaning |
 | -------------  | ------------- |

@@ -5,10 +5,14 @@ The Xena platform gives you an API along with language-specific examples, and do
 The core functionality of Xena apps is to **enhance the Xena application by allowing developers to implment custom fetures not avaliable in the standard implmentation of Xena**. This page describes some of that functionality and points you to resources to assist you in building it into your app.
 
 
-## Make coffee
+## Create a new partner
 
-Using the Xena api you can make 
+Using the Xena api you can create a new partner for use with X
 
-## Add inventory items.
+## Create a new order
 
-using the xena api you can programmticly merge new items into your inventory system.
+Using the xena api you can create a new order and submit standared data for your bussness case.
+
+## Add invoice
+
+Using the xena api you can add invoices to the system though your application.

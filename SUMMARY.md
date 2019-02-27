@@ -1,13 +1,13 @@
 # Table of contents
 
-* [OverView](README.md)
-  * [Quick Start .net core](README.md)
+* [OverView](OverView.md)
+  * [Quick Start .Net core](README.md)
   * [Quick Start PHP](README.md)
   * [Quick Start JavaScript](README.md)
-* [Fundamental](README.md)
-  * [Authorization](README.md)
-  * [Developerconsole](README.md)
-* [Resources](README.md)
-  * [Forum](README.md)
-  * [Swagger API](README.md)
+* [Fundamental](Fundamentals.md)
+  * [Authorization](Fundamentals/Authorization.md)
+  * [Developerconsole](Fundamentals/DeveloperConsole.md)
+* [Resources](Resources.md)
+  * [Forum](Resources/Forum.md)
+  * [Swagger API](Resources/Swagger.md)
 

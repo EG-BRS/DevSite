@@ -99,7 +99,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 ```		
 
 
-In your controler create an action which you want to ensure that the user is logged in for. 
+In your controller create an action which you want to ensure that the user is logged in for. 
 
 
 ```csharp

@@ -49,4 +49,4 @@ There are two sections to the application details page.  The first is the basic 
 
 The second section to the application details allows you to set a price for your applcaiton.  Set it up to run as a plugin in xena and lets you see who has installed your application.
 
-![Creating application popup from Xena developer](../Images/DeveloperConsole/detail2.PNG)
+![Creating application popup from Xena developer](../Images/DeveloperConsole/Detail2.PNG)

@@ -12,7 +12,7 @@ If you are creating an application for use with Xena you will need to register t
 - We need to contact you if there are any issues with your application.
 - If you need autnecation credetnails they need to be linked to your app.
 
-## Creating an application
+### Creating an application
 
 Click the create button to create your first Xena applicaiton.
 
@@ -35,10 +35,18 @@ Visibility allows you to decide.  If other users should be able to see your app?
 | Private        | Only fiscalsetups where you have a membership can see and use this app.  |
 | Internal          | Only the current fiscalsetup can see and use this app.  |
 
-## List of your applications
+### List of your applications
 
 You should now see a list of your applications.  Click on the name of your applicaton to see its details.
 
-#
-
 ![Creating application popup from Xena developer](../Images/DeveloperConsole/CreatedApplicationList.PNG)
+
+## Application detials
+
+There are two sections to the application details page.  The first is the basic details of your applcation allowing you to edit this information.  The second tab allows you to set up some terms of use for your applcation which users will be presented with the first time they login to your application.   The last tab is the oauth tab where you set up your client credetials if you will be using the Xena api.
+
+![Creating application popup from Xena developer](../Images/DeveloperConsole/detail1.PNG)
+
+The second section to the application details allows you to set a price for your applcaiton.  Set it up to run as a plugin in xena and lets you see who has installed your application.
+
+![Creating application popup from Xena developer](../Images/DeveloperConsole/detail2.PNG)

@@ -1,7 +1,7 @@
 # Table of contents
 
 * [QuickStarts](OverView.md)
-  * [Quick Start .Net core](QuickStarts/DotNetCoreMVC)
+  * [.Net core MVC QuickStart](QuickStarts/DotNetCoreMVC.md)
   * [Quick Start PHP](README.md)
   * [Quick Start JavaScript](README.md)
 * [Fundamental](Fundamentals.md)

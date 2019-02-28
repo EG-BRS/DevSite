@@ -13,10 +13,6 @@ The font used in Xena is Open Sans, provided by Google Fonts, in the styles of R
 | Green, darker variant        | #899432  |
 | Blue          | #4A80B8  |
 
-
-
-
-
 ### System colors
 
 | color          | Color |
@@ -31,8 +27,6 @@ The font used in Xena is Open Sans, provided by Google Fonts, in the styles of R
 | Menu font color	|  #777777 | 
 | Menu background color	|  #DDDDDD | 
 | Body background color	 | #FAFAFA | 
-
-
 
 ## Color themes
 

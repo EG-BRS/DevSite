@@ -120,9 +120,9 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         }
 ```		
 
-## Step 4 Create an authrize action in your contorler.
+## Step 4: Create an authorized action in your controller.
 
-In your controller create an action which you want to ensure that the user is logged in for.  The Authorize attribute to the action.
+Add the [Authorize] attribute to an action in your controller, this will tell MVC that your user must be authorized to access it. 
 
 
 ```csharp
@@ -139,7 +139,7 @@ public IActionResult Xena()
 
 The view for this action should contain some JavaScript at the top which will ensure that this page opens in a new window and then closes after it has logged your user in.
 
-Note: You cant open the login in the plugin iframe in xena you will need to open this in a new window.  Then refresh the login.
+>Note: You cant open the login in the plugin iFrame in Xena you will need to open this in a new window.  Then refresh the login.
 
 
 ```csharp
@@ -171,7 +171,7 @@ Note: You cant open the login in the plugin iframe in xena you will need to open
 ```		
 
 
-## Step 5 run your application and it should now log into xena
+## Step 5: Run your application and it should now log into xena
 
 You should now have your first Xena app 
 

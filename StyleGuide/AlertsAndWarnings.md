@@ -4,7 +4,7 @@
 We operate with four types of information: Info, Warning, Danger and Success. Here they are represented in alerts:
 
 
-                                 ![Alert message](../Images/StyleGuide/alerts.PNG)
+![Alert message](../Images/StyleGuide/alerts.PNG)
 ![Creating application popup from Xena developer](../Images/DeveloperConsole/CreatedApplicationList.PNG)
 
                     

@@ -13,10 +13,10 @@ To run this QuickStart, you need the following prerequisites:
 ## Step 1: Create an application
 
 
-* Create an application in Xena Developer 
-* On the Oauth tab click "connect"
+* Create an application in [Xena Developer](Fundamentals/CreateApplication.md)
+* On the OAuth tab click "connect"
 * Click the "create" button to create new client credentials.
-* in your project page, create hybrid credentials.
+* In your project page, create hybrid credentials.
 * Give your credentials a name and description this will be displayed to the user on on the consent screen and should be descriptive of your application. 
 * under grant type select "hybrid"
 * click Create
@@ -97,3 +97,57 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
             });
         }
 ```		
+
+
+In your controler create an action which you want to ensure that the user is logged in for. 
+
+
+```csharp
+[Authorize]
+public IActionResult Xena()
+    {
+            ViewData["Message"] = "Secure page.";
+
+            return View();
+    }
+
+```		
+
+
+The first view should contain some JavaScript which will ensure that this page opens in a new window and then closes after it has logged your user in.
+
+You cant open the login in the plugin iframe in xena you will need to open this in a new window.  Then refresh the login.
+
+
+```csharp
+@using Microsoft.AspNetCore.Authentication
+<script type="text/javascript">
+    window.opener.location.href = window.location.href   
+    close();
+</script>
+<h2>Claims</h2>
+
+<dl>
+    @foreach (var claim in User.Claims)
+    {
+        <dt>@claim.Type</dt>
+        <dd>@claim.Value</dd>
+    }
+</dl>
+
+<h2>Properties</h2>
+
+<dl>
+    @foreach (var prop in (await Context.AuthenticateAsync()).Properties.Items)
+    {
+        <dt>@prop.Key</dt>
+        <dd>@prop.Value</dd>
+    }
+</dl>
+
+```		
+
+You should now have your first Xena app 
+
+
+

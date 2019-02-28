@@ -28,10 +28,32 @@ To run this QuickStart, you need the following prerequisites:
 
 
 
-## Step 2: Set up the sample
+## Step 2: Add settings
+
+Open the appsettings.json file in your project add the following settings
 
 
-In startup.cs  add the following to your ConfigureServices method.
+```json
+{
+  "Xena": {
+    "Authority": "https://login.xena.biz",
+	"XenaAPIEndpoint": "https://my.xena.biz",
+    "ClientId": "[Your Client id from step 1]",
+    "ClientSecret": "[Your client secret from step 1]"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}
+```
+
+## Step 3: Configure authentication 
+
+
+In startup.cs add the following to your ConfigureServices method.
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -98,8 +120,9 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         }
 ```		
 
+## Step 4 Create an authrize action in your contorler.
 
-In your controller create an action which you want to ensure that the user is logged in for. 
+In your controller create an action which you want to ensure that the user is logged in for.  The Authorize attribute to the action.
 
 
 ```csharp
@@ -114,9 +137,9 @@ public IActionResult Xena()
 ```		
 
 
-The first view should contain some JavaScript which will ensure that this page opens in a new window and then closes after it has logged your user in.
+The view for this action should contain some JavaScript at the top which will ensure that this page opens in a new window and then closes after it has logged your user in.
 
-You cant open the login in the plugin iframe in xena you will need to open this in a new window.  Then refresh the login.
+Note: You cant open the login in the plugin iframe in xena you will need to open this in a new window.  Then refresh the login.
 
 
 ```csharp
@@ -146,6 +169,9 @@ You cant open the login in the plugin iframe in xena you will need to open this 
 </dl>
 
 ```		
+
+
+## Step 5 run your application and it should now log into xena
 
 You should now have your first Xena app 
 

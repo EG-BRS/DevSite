@@ -1,10 +1,13 @@
 
-Panels
-Basic
+
+### Basic
+
 A panel is a section with header and div elements.
 
-[Panel title]
-[Content]
+![form label](../Images/StyleGuide/panel_standard.PNG)
+
+
+```html
 <section class="panel panel-default">
     <header class="panel-heading">
         <h2 class="panel-title">[Panel title]</h2>
@@ -13,11 +16,15 @@ A panel is a section with header and div elements.
         [Content]
     </div>
 </section>
-Context menu
+```
+
+### Context menu
+
 A panel can have a context menu in the header along with shortcut buttons.
 
-[Panel title]
-[Content]
+![form label](../Images/StyleGuide/panel_menu.PNG)
+
+```html
 <section class="panel panel-default">
     <header class="panel-heading">
         <h2 class="panel-title">[Panel title]</h2>
@@ -35,15 +42,15 @@ A panel can have a context menu in the header along with shortcut buttons.
         [Content]
     </div>
 </section>
-Tabs
+```
+
+### Tabs
+
 The content of a panel can be divided in tabs.
 
-[Panel title]
-Den første lange 1
-Ekstra lang fane 2
-En tredje og meget lang fane 3
-Tab 1
+![form label](../Images/StyleGuide/panel_tabs.PNG)
 
+```html
 <section class="panel panel-default">
     <header class="panel-heading">
         <h2 class="panel-title">[Panel title]</h2>
@@ -73,15 +80,18 @@ Tab 1
         </div>
     </div>
 </section>
-Alerts
+```
+
+### Alerts
+
 A panel can have alerts spanning the whole width of the panel. View it as a kind of “global alert” for that panel.
 
-SEE ALSO: Alerts documentation
+SEE ALSO: [Alerts documentation](StyleGuide/AlertsAndWarnings.md)
 
-[Panel title]
-[Alert]
+![form label](../Images/StyleGuide/panel_alert.PNG)
 
-[Content]
+
+```html
 <section class="panel panel-default">
     <header class="panel-heading">
         <h2 class="panel-title">[Panel title]</h2>
@@ -93,5 +103,8 @@ SEE ALSO: Alerts documentation
         [Content]
     </div>
 </section>
+```
+
+
 More
-SEE ALSO: Pagination documentation
+SEE ALSO: [Pagination documentation](StyleGuide/Pagination.md) 

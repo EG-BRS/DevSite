@@ -15,4 +15,5 @@
   * [Swagger API](Resources/Swagger.md)
   * [FAQs](Resources/FAQs.md)
   * [Samples](Resources/Samples.md)
+* [Xena Design Guide](DesignGuide.md)
 

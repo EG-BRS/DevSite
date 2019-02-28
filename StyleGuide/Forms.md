@@ -21,7 +21,7 @@ Most features in Xena rely on user input. The most used layout for forms in Xena
 
 Form input with an illustrative icon.
 
-![form label](../Images/StyleGuide/form_icon-label.PNG)
+![form label](../Images/StyleGuide/form_icon.PNG)
 
 Label
 
@@ -61,7 +61,7 @@ Form input with an illustrative icon and link add-on.
 
 Form input with an illustrative icon and button add-on.
 
-![form label](../Images/StyleGuide/form_icon-label.PNG)
+![form label](../Images/StyleGuide/form_icon-button.PNG)
 
 
 ```html
@@ -84,7 +84,7 @@ Form input with an illustrative icon and button add-on.
 
 The above additions can be used in different combinations.
 
-![form label](../Images/StyleGuide/form_icon-label.PNG)
+![form label](../Images/StyleGuide/form_inputgroup.PNG)
 
 ```html
  <div class="form-horizontal">

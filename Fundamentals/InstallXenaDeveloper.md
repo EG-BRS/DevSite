@@ -7,5 +7,5 @@ Login to xena in in the company which you would like to create your application.
 
 ## Developer menu
 
-Once you have installed the Xena developer app you should now see the Udvikler menu under app store.   Select the udvilker menu item now.
+Once you have installed the Xena developer app you should now see the **Udvikler** menu under app store.   Select the udvilker menu item now.
 

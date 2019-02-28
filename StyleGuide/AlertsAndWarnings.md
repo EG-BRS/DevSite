@@ -4,7 +4,7 @@
 We operate with four types of information: Info, Warning, Danger and Success. Here they are represented in alerts:
 
 
-![Alert message](../Images/Styleguide/AlertMessage.PNG)
+![Alert message](../Images/Styleguide/alerts.PNG)
 
 
 ```html
@@ -28,7 +28,7 @@ div class="alert alert-info">
 
 Here they are represented in font color:
 
-![Font text colors](../Images/Styleguide/FontTextColor.PNG)
+![Font text colors](../Images/Styleguide/alerts_text.PNG)
 
 
 ```html
@@ -40,7 +40,7 @@ Here they are represented in font color:
 
 Here they are represented in background color on lines:
 
-![Font Colors](../Images/Styleguide/BackgroundColor.PNG)
+![Font Colors](../Images/Styleguide/alerts_lines.PNG)
 
 
 ```html
@@ -55,7 +55,7 @@ Also panels can represent these types:
 
 SEE ALSO: [Panel documentation](Panel.md)
 
-![Panel colors](../Images/Styleguide/PanelColor.PNG)
+![Panel colors](../Images/Styleguide/alerts_panels.PNG)
 
 ```html
 <section class="panel panel-info">

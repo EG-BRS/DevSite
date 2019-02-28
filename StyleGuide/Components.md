@@ -5,7 +5,7 @@ There are different components in Xena that have their own set of CSS classes.
 
 Cards (not the same as panels) are used to contain data. Especially used in Status overviews.
 
-![Card](../Images/Styleguide/component_card.PNG)
+![Card](../Images/StyleGuide/component_card.PNG)
 
 ```html
 <div class="card card-default">
@@ -32,7 +32,7 @@ Cards (not the same as panels) are used to contain data. Especially used in Stat
 
 Cards are also used to list fiscals.
 
-![Card fiscal list](../Images/Styleguide/component_card-fiscal.PNG)
+![Card fiscal list](../Images/StyleGuide/component_card-fiscal.PNG)
 
 ```html
 <div class="card-deck-wrapper">
@@ -56,7 +56,7 @@ Cards are also used to list fiscals.
 
 vCards is a digital contact card. Visually we try to illustrate that.
 
-![VCard](../Images/Styleguide/component_vcard.PNG)
+![VCard](../Images/StyleGuide/component_vcard.PNG)
 
 ```html
 <div class="vcard">
@@ -101,7 +101,7 @@ vCards is a digital contact card. Visually we try to illustrate that.
 
 Used in list of vouchers and files with preview. The list scrolls horizontally. The following demo shows a container used for “dropzone”, a preview loading and a regular file preview.
 
-![Card](../Images/Styleguide/component_filelist.PNG)
+![Card](../Images/StyleGuide/component_filelist.PNG)
 
 ```html
 <div class="file-slider">

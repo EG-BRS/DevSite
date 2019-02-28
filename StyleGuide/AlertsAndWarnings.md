@@ -5,7 +5,7 @@ We operate with four types of information: Info, Warning, Danger and Success. He
 
 
 ![Alert message](../Images/StyleGuide/alerts.PNG)
-![Creating application popup from Xena developer](../Images/DeveloperConsole/CreatedApplicationList.PNG)
+
 
                     
 ```html
@@ -29,7 +29,7 @@ div class="alert alert-info">
 
 Here they are represented in font color:
 
-![Font text colors](../Images/Styleguide/alerts_text.PNG)
+![Font text colors](../Images/StyleGuide/alerts_text.PNG)
 
 
 ```html
@@ -41,7 +41,7 @@ Here they are represented in font color:
 
 Here they are represented in background color on lines:
 
-![Font Colors](../Images/Styleguide/alerts_lines.PNG)
+![Font Colors](../Images/StyleGuide/alerts_lines.PNG)
 
 
 ```html
@@ -56,7 +56,7 @@ Also panels can represent these types:
 
 SEE ALSO: [Panel documentation](Panel.md)
 
-![Panel colors](../Images/Styleguide/alerts_panels.PNG)
+![Panel colors](../Images/StyleGuide/alerts_panels.PNG)
 
 ```html
 <section class="panel panel-info">

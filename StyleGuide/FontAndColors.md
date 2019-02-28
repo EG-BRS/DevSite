@@ -34,7 +34,7 @@ The font used in Xena is Open Sans, provided by Google Fonts, in the styles of R
 | Mint green	 | ![#40C4A7](https://placehold.it/15/40C4A7/000000?text=+) #40C4A7	| ![#3CA991](https://placehold.it/15/3CA991/000000?text=+) #3CA991 | 
 | Ocean Blue	| ![#5AAEDC](https://placehold.it/15/5AAEDC/000000?text=+) #5AAEDC	 | ![#5197BD](https://placehold.it/15/5197BD/000000?text=+) #5197BD | 
 | Blue	|  ![#346FAB](https://placehold.it/15/346FAB/000000?text=+) #346FAB	| ![#326394](https://placehold.it/15/326394/000000?text=+) #326394 | 
-| Navi Blue	 | ![#32404E](https://placehold.it/15/32404E/000000?text=+)#32404E | ![#303C47](https://placehold.it/15/303C47/000000?text=+)	 #303C47 | 
+| Navi Blue	 | ![#32404E](https://placehold.it/15/32404E/000000?text=+)#32404E | ![#303C47](https://placehold.it/15/303C47/000000?text=+) #303C47 | 
 | Purple	| ![#995B92](https://placehold.it/15/995B92/000000?text=+) #995B92	| ![#855280](https://placehold.it/15/855280/000000?text=+) #855280 | 
 | Prikly	| ![#B25E71](https://placehold.it/15/B25E71/000000?text=+)  #B25E71	| ![#9A5564](https://placehold.it/15/9A5564/000000?text=+) #9A5564 |  
 | Pink | 	![#E6007E](https://placehold.it/15/E6007E/000000?text=+) #E6007E	| ![#C5076F](https://placehold.it/15/C5076F/000000?text=+) #C5076F |  

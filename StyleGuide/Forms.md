@@ -3,7 +3,7 @@ Most features in Xena rely on user input. The most used layout for forms in Xena
 
 ## Label
 
-![VCard](../Images/StyleGuide/form_standard.PNG)
+![Standard form](../Images/StyleGuide/form_standard.PNG)
 
 
 ```html
@@ -19,11 +19,11 @@ Most features in Xena rely on user input. The most used layout for forms in Xena
 ```
 
 
-Form input with an illustrative icon.
+Form input with an **illustrative icon**.
 
-![form label](../Images/StyleGuide/form_icon.PNG)
+![form Icon](../Images/StyleGuide/form_icon.PNG)
 
-Label
+
 
 ```html
  <div class="form-horizontal">
@@ -39,9 +39,9 @@ Label
 </div>
 ```
 
-Form input with an illustrative icon and link add-on.
+Form input with an illustrative icon and **link add-on**.
 
-![form label](../Images/StyleGuide/form_icon-label.PNG)
+![Form Icon](../Images/StyleGuide/form_icon-label.PNG)
 
 ```html
 <div class="form-horizontal">
@@ -59,9 +59,9 @@ Form input with an illustrative icon and link add-on.
 ```
 
 
-Form input with an illustrative icon and button add-on.
+Form input with an illustrative icon and **button add-on**.
 
-![form label](../Images/StyleGuide/form_icon-button.PNG)
+![Form with Icon and Button](../Images/StyleGuide/form_icon-button.PNG)
 
 
 ```html
@@ -84,7 +84,9 @@ Form input with an illustrative icon and button add-on.
 
 The above additions can be used in different combinations.
 
-![form label](../Images/StyleGuide/form_inputgroup.PNG)
+### Input group
+
+![Form Input group](../Images/StyleGuide/form_inputgroup.PNG)
 
 ```html
  <div class="form-horizontal">
@@ -108,7 +110,7 @@ The above additions can be used in different combinations.
 
 Some form groups contains multiple inputs, like a delivery address. Notice the following example uses form-group-multiple, input-pair and control-container to handle this situation.
 
-![complex](../Images/StyleGuide/form_complex.PNG)
+![Complex form](../Images/StyleGuide/form_complex.PNG)
 
 ```html
 <div class="form-horizontal">
@@ -134,9 +136,9 @@ Some form groups contains multiple inputs, like a delivery address. Notice the f
 ```
 
 
-Another situation: Different filerts and search features. Here we often use form-inline.
+Another situation: Different filers and search features. Here we often use form-inline.
 
-![Inline](../Images/StyleGuide/form_inline.PNG)
+![Form Inline](../Images/StyleGuide/form_inline.PNG)
 	 
 ```html	 
 <div class="form-inline">
@@ -161,7 +163,7 @@ Another situation: Different filerts and search features. Here we often use form
 
 #### checkbox
 
-![form label](../Images/StyleGuide/form_checkboxes.PNG)
+![Form Checkboxes](../Images/StyleGuide/form_checkboxes.PNG)
 
 ```html
 <div class="form-horizontal">
@@ -197,7 +199,7 @@ Another situation: Different filerts and search features. Here we often use form
 
 #### Radiobuttons
 
-![Radiobuttons](../Images/StyleGuide/form_radiobuttons.PNG)
+![Form Radiobuttons](../Images/StyleGuide/form_radiobuttons.PNG)
 
 ```html
 <div class="form-horizontal">

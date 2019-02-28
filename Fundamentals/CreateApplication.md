@@ -3,7 +3,7 @@
 
 Once you have installed the Xena developer app you should now see the Udvikler menu under app store.   Select the udvilker menu item now.
 
-## registering an application 
+## Application registration 
 
 If you are creating an application for use with Xena you will need to register that application.  There are sevral reasons why you need to do this.
 

@@ -1,10 +1,12 @@
-Pagination
+
 We have two different styles for paginations: For tables/pages and for panels.
 
-Tables/pages
-Column 1	Column 2
-Cell 1	Cell 2
-Page  of 5
+
+### Tables/pages
+
+![form label](../Images/StyleGuide/pagination_table.PNG)
+
+```html
 <div class="table-footer">
     <ul class="pagination">
         <li><a href="#" title="First"><i class="icon-caret-left"></i></a></li>
@@ -14,8 +16,13 @@ Page  of 5
         <li><a href="#" title="Last"><i class="icon-caret-right"></i></a></li>
     </ul>
 </div>
-Panels
-Page of 5
+```
+
+### Panels
+
+![form label](../Images/StyleGuide/pagination_panels.PNG)
+
+```html
 <!--Between panel-heading and panel-body-->
 <ul class="panel-pagination">
     <li>
@@ -28,3 +35,4 @@ Page of 5
         <a href="#" title="Last"><i class="icon-caret-right"></i></a>
     </li>
 </ul>
+```

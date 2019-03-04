@@ -1,9 +1,10 @@
 # Table of contents
 
-* [QuickStarts](OverView.md)
-  * [.Net core MVC QuickStart](QuickStarts/DotNetCoreMVC.md)
-  * [Quick Start PHP](README.md)
-  * [Quick Start JavaScript](README.md)
+* [QuickStarts](QuickStarts.md)
+  * [Asp .Net Core MVC QuickStart](QuickStarts/DotNetCoreMVC.md)
+  * [Asp .Net MVC QuickStart](QuickStarts/AspDotNetMVC.md)
+  * [Quick Start PHP](QuickStarts/Php.md)
+  * [Quick Start JavaScript](QuickStarts/JavaScript.md)
 * [Fundamental](Fundamentals.md)
   * [Authorization](Fundamentals/Authorization.md)
   * [Install Xena Developer app](Fundamentals/InstallXenaDeveloper.md)  

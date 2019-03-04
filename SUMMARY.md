@@ -26,4 +26,3 @@
   * [Layout](StyleGuide/Layout.md) 
   * [Pagination](StyleGuide/Pagination.md)
   * [Panels](StyleGuide/Panels.md)
-

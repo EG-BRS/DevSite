@@ -105,7 +105,7 @@ vCards is a digital contact card. Visually we try to illustrate that.
 
 Used in list of vouchers and files with preview. The list scrolls horizontally. The following demo shows a container used for “dropzone”, a preview loading and a regular file preview.
 
-![Card](../Images/StyleGuide/component_filelist.PNG)
+![](../Images/StyleGuide/component_filelist.PNG)
 
 ```html
 <div class="file-slider">

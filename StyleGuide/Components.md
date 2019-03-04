@@ -5,7 +5,9 @@ There are different components in Xena that have their own set of CSS classes.
 
 Cards (not the same as panels) are used to contain data. Especially used in Status overviews.
 
-![Card](../Images/StyleGuide/component_card.PNG)
+### Cards standard
+
+![Standard card](../Images/StyleGuide/component_card.PNG)
 
 ```html
 <div class="card card-default">
@@ -30,9 +32,11 @@ Cards (not the same as panels) are used to contain data. Especially used in Stat
 </div>
 ```
 
+### Cards fiscals
+
 Cards are also used to list fiscals.
 
-![Card fiscal list](../Images/StyleGuide/component_card-fiscal.PNG)
+![Fiscal card](../Images/StyleGuide/component_card-fiscal.PNG)
 
 ```html
 <div class="card-deck-wrapper">

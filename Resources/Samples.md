@@ -1,4 +1,7 @@
-# Creating Oauth2 Credeitnals
+In addion to a number of [QuickStarts](../OverView.md) we have a sample project hosted on GitHub.
 
-## Installing the Xena Developer console
+[Xena Samples](https://github.com/EG-BRS/XenaSamples):
+
+- [.net core](https://github.com/EG-BRS/XenaSamples/tree/master/Samples/DotNetCore)
+- [JavaScript](https://github.com/EG-BRS/XenaSamples/tree/master/Samples/JavaScript)
 

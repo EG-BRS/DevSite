@@ -1,5 +1,3 @@
-# Table of contents
-
 * [QuickStarts](QuickStarts.md)
   * [Asp .Net Core MVC QuickStart](QuickStarts/DotNetCoreMVC.md)
   * [Asp .Net MVC QuickStart](QuickStarts/AspDotNetMVC.md)

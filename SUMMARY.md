@@ -17,6 +17,7 @@
 * [Xena Style Guide](StyleGuide.md)
   * [Alerts and warnings](StyleGuide/AlertsAndWarnings.md)
   * [Components](StyleGuide/Components.md)
+  * [Dropdowns](StyleGuide/Dropdowns.md)
   * [Fonts and Colors](StyleGuide/FontAndColors.md)
   * [Forms](StyleGuide/Forms.md)
   * [Icons](StyleGuide/Icons.md)

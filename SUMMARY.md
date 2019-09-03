@@ -8,7 +8,6 @@
 ## Development
 
 * [Get started](development/get-started/README.md)
-  * [Introduction to Xena apps](development/get-started/introduction-to-xena-apps.md)
   * [Become a developer](development/get-started/installxenadeveloper.md)
   * [Register your app](development/get-started/createapplication.md)
   * [The Xena API](development/get-started/the-xena-api.md)

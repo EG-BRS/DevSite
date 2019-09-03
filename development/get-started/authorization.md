@@ -1,3 +1,7 @@
+---
+description: Fundamentals on authorization in apps.
+---
+
 # Authorization
 
 ## About Authorization

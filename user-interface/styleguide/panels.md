@@ -1,10 +1,14 @@
+---
+description: Panels are sections in the interface.
+---
+
 # Panels
 
 ## Basic
 
 A panel is a section with header and div elements.
 
-![Standard panel.](../.gitbook/assets/panel_standard.PNG)
+![Standard panel.](../../.gitbook/assets/panel_standard.PNG)
 
 ```markup
 <section class="panel panel-default">
@@ -21,7 +25,7 @@ A panel is a section with header and div elements.
 
 A panel can have a context menu in the header along with shortcut buttons.
 
-![Panel with context menu open.](../.gitbook/assets/panel_menu.PNG)
+![Panel with context menu open.](../../.gitbook/assets/panel_menu.PNG)
 
 ```markup
 <section class="panel panel-default">
@@ -47,7 +51,7 @@ A panel can have a context menu in the header along with shortcut buttons.
 
 The content of a panel can be divided in tabs.
 
-![Panel with three tabs.](../.gitbook/assets/panel_tabs.PNG)
+![Panel with three tabs.](../../.gitbook/assets/panel_tabs.PNG)
 
 ```markup
 <section class="panel panel-default">
@@ -85,7 +89,7 @@ The content of a panel can be divided in tabs.
 
 A panel can have alerts spanning the whole width of the panel. View it as a kind of “global alert” for that panel.
 
-![Panel with a alert in the top.](../.gitbook/assets/panel_alert.PNG)
+![Panel with a alert in the top.](../../.gitbook/assets/panel_alert.PNG)
 
 ```markup
 <section class="panel panel-default">

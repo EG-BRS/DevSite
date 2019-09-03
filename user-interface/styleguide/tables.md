@@ -1,10 +1,14 @@
+---
+description: Present and edit data in tables.
+---
+
 # Tables
 
 ## Basic tables
 
 A table is always wrapped in `<div class="table-responsive"> ... </div>` The table element must have the class `table`.
 
-![Standard table.](../.gitbook/assets/table_standard.PNG)
+![Standard table.](../../.gitbook/assets/table_standard.PNG)
 
 ```markup
 <div class="table-responsive">
@@ -34,7 +38,7 @@ A table is always wrapped in `<div class="table-responsive"> ... </div>` The tab
 
 You can enrich the table by adding additional classes.
 
-![Decorated table rows.](../.gitbook/assets/table_rows.PNG)
+![Decorated table rows.](../../.gitbook/assets/table_rows.PNG)
 
 ```markup
 <div class="table-responsive">
@@ -80,7 +84,7 @@ You can enrich the table by adding additional classes.
 
 Each row can have a context menu.
 
-![Table row with context menu open.](../.gitbook/assets/table_rowmenu.PNG)
+![Table row with context menu open.](../../.gitbook/assets/table_rowmenu.PNG)
 
 ```markup
 <div class="table-responsive">
@@ -119,7 +123,7 @@ Each row can have a context menu.
 
 Edit data in table.
 
-![Table row with editable data.](../.gitbook/assets/table_edit.PNG)
+![Table row with editable data.](../../.gitbook/assets/table_edit.PNG)
 
 ```markup
 <div class="table-responsive">
@@ -144,7 +148,7 @@ Edit data in table.
 
 ## Expand rows
 
-![Table row expanded.](../.gitbook/assets/table_row-expanded.PNG)
+![Table row expanded.](../../.gitbook/assets/table_row-expanded.PNG)
 
 ```markup
 <div class="table-responsive">

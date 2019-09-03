@@ -1,4 +1,8 @@
-# Fonts and Colors
+---
+description: Overview of colors and use of fonts.
+---
+
+# Colors and fonts
 
 ## Font
 

@@ -10,3 +10,9 @@ With our API you can integrate your systems with the online accounting system Xe
 
 We provide this site to help you to get started on building apps and integrations. 
 
+\[Video\]
+
+### Feedback and support
+
+We have a Xena Developer Group on Stackoverflow. Here you can ask questions and help others to do awesome stuff.
+

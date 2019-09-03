@@ -1,14 +1,12 @@
 ---
-description: >-
-  Dropdowns are used as menus or shortcuts. Dropdowns are not the same as select
-  elements.
+description: Dropdowns are used as menus or shortcuts.
 ---
 
 # Dropdowns
 
 Standard dropdown:
 
-![Dropdown menu aligning left.](../.gitbook/assets/dropdown-left.PNG)
+![Dropdown menu aligning left.](../../.gitbook/assets/dropdown-left.PNG)
 
 ```markup
 <div class="dropdown">
@@ -32,5 +30,5 @@ If using in the right side of the screen, add `dropdown-menu-right`:
 </div>
 ```
 
-![Dropdown menu aligning right.](../.gitbook/assets/dropdown-right.PNG)
+![Dropdown menu aligning right.](../../.gitbook/assets/dropdown-right.PNG)
 

@@ -1,12 +1,12 @@
 ---
-description: 'We have two different styles for paginations: For tables/pages and for panels.'
+description: Styles of paginations in tables and panels.
 ---
 
 # Pagination
 
 ## Tables/pages
 
-![Pagination beneath a table.](../.gitbook/assets/pagination_table.PNG)
+![Pagination beneath a table.](../../.gitbook/assets/pagination_table.PNG)
 
 ```markup
 <div class="table-footer">
@@ -22,7 +22,7 @@ description: 'We have two different styles for paginations: For tables/pages and
 
 ## Panels
 
-![Pagination in a panel.](../.gitbook/assets/pagination_panels.PNG)
+![Pagination in a panel.](../../.gitbook/assets/pagination_panels.PNG)
 
 ```markup
 <!--Between panel-heading and panel-body-->

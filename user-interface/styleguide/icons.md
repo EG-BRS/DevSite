@@ -8,7 +8,7 @@ All the free icons are available for you when you use our stylesheet. For a comp
 
 To paste an icon in your code, follow this pattern:
 
-```text
+```markup
 <i class="fas [icon name]"></i>
 ```
 

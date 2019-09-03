@@ -1,8 +1,12 @@
+---
+description: Overview of button usage.
+---
+
 # Buttons
 
 Available button styles:
 
-![Buttons.](../.gitbook/assets/buttons_overview.PNG)
+![Buttons.](../../.gitbook/assets/buttons_overview.PNG)
 
 Please note:
 
@@ -14,21 +18,21 @@ Please note:
 
 Examples:
 
-![Primary button.](../.gitbook/assets/buttons_primary.PNG)
+![Primary button.](../../.gitbook/assets/buttons_primary.PNG)
 
 ```markup
 <button class="btn btn-primary">Buy</button>
 <button class="btn btn-default">Cancel</button>
 ```
 
-![Danger button.](../.gitbook/assets/buttons_danger.PNG)
+![Danger button.](../../.gitbook/assets/buttons_danger.PNG)
 
 ```markup
 <button class="btn btn-danger">Delete</button>
 <button class="btn btn-default">Cancel</button>
 ```
 
-![Success button.](../.gitbook/assets/buttons_success.PNG)
+![Success button.](../../.gitbook/assets/buttons_success.PNG)
 
 ```markup
 <button class="btn btn-success">Complete</button>
@@ -37,7 +41,7 @@ Examples:
 
 ## Button group
 
-![Four buttons grouped.](../.gitbook/assets/buttons_group.PNG)
+![Four buttons grouped.](../../.gitbook/assets/buttons_group.PNG)
 
 ```markup
  <div class="btn-group">
@@ -50,7 +54,7 @@ Examples:
 
 ## Justified button group:
 
-![Four buttons grouped.](../.gitbook/assets/buttons_group-just.PNG)
+![Four buttons grouped.](../../.gitbook/assets/buttons_group-just.PNG)
 
 ```markup
 <div class="btn-group btn-group-justified">

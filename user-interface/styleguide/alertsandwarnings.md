@@ -1,8 +1,12 @@
+---
+description: Display information and warnings in a clear way.
+---
+
 # Alerts and warnings
 
 We operate with four types of information: Info, Warning, Danger and Success. Here they are represented in alerts:
 
-![Alert message](../.gitbook/assets/alerts.PNG)
+![Alert message](../../.gitbook/assets/alerts.PNG)
 
 ```markup
 div class="alert alert-info">
@@ -25,7 +29,7 @@ div class="alert alert-info">
 
 Here they are represented in font color:
 
-![Font text colors](../.gitbook/assets/alerts_text.PNG)
+![Font text colors](../../.gitbook/assets/alerts_text.PNG)
 
 ```markup
 <p class="text-info">Info text.</p>
@@ -36,7 +40,7 @@ Here they are represented in font color:
 
 Here they are represented in background color on lines:
 
-![Font Colors](../.gitbook/assets/alerts_lines.PNG)
+![Font Colors](../../.gitbook/assets/alerts_lines.PNG)
 
 ```markup
 <p class="bg-info">Info line.</p>
@@ -47,7 +51,7 @@ Here they are represented in background color on lines:
 
 Also panels can represent these types:
 
-![Panel colors](../.gitbook/assets/alerts_panels.PNG)
+![Panel colors](../../.gitbook/assets/alerts_panels.PNG)
 
 ```markup
 <section class="panel panel-info">

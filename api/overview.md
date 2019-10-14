@@ -19,4 +19,4 @@ Xena is divided into diffrent APIs.
 3. Find the network tab and activate the XHR filter
 4. Refresh the page (F5)
 5. Now you an see all the requests out client makes to the different API.
-![devtab.](../../.gitbook/assets/devtab.png)
+![devtab.](../.gitbook/assets/devtab.png)

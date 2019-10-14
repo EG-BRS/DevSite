@@ -20,4 +20,4 @@ Xena is divided into diffrent APIs.
 ![devtab](../.gitbook/assets/devtab.png)
 4. Refresh the page (F5)
 5. Now you an see all the requests out client makes to the different API.
-
+![devnetwork](../.gitbook/assets/devnetwork.png)

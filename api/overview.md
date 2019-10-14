@@ -1,7 +1,16 @@
-# Xena API
+# Xena APIs
 
+Xena is divided into diffrent APIs and we are working on added more.
 
-https://dev.xena.biz/api/
+| Name | Description | Support API keys |
+| :--- | :--- |
+| Xena | The Old core API of Xena. Contains all of the core ERP functions | Yes |
+| Cars (Giulia) | All function relation to handling cars | No |
+| Cars (Giulia) | All function relation to handling cars | No |
+| Cars (Giulia) | All function relation to handling cars | No |
+| Cars (Giulia) | All function relation to handling cars | No |
+| Cars (Giulia) | All function relation to handling cars | No |
+
 
 ## How to find the right API to use
 
@@ -10,3 +19,4 @@ https://dev.xena.biz/api/
 3. Find the network tab and activate the XHR filter
 4. Refresh the page (F5)
 5. Now you an see all the requests out client makes to the different API.
+![devtab.](../../.gitbook/assets/devtap.PNG)

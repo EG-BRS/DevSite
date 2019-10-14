@@ -17,7 +17,7 @@
   * [Creating plugins](development/get-started/createplugin.md)
 * [Samples](development/samples.md)
 * [API documentation](api/overview.md)
-  * [Xean](api/xena.md)
+  * [Xena](api/xena.md)
   * [Cars (Giulia)](api/giulia.md)
   * [Articles & prices (Gaia)](api/gaia.md)
 

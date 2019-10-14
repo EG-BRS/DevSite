@@ -16,7 +16,11 @@
   * [Using WebHooks](development/get-started/using-webhooks.md)
   * [Creating plugins](development/get-started/createplugin.md)
 * [Samples](development/samples.md)
-* [API documentation](https://dev.xena.biz/api/)
+* [API documentation](api/overview.md)
+  * [Xean](api/xena.md)
+  * [Cars (Giulia)](api/giulia.md)
+  * [Articles & prices (Gaia)](api/gaia.md)
+
 
 ## User interface
 

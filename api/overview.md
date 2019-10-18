@@ -4,14 +4,14 @@ WPI
 
 Xena is divided into diffrent APIs.
 
-| Name | Description | Support API keys |
-| :--- | :--- | :--- |
-| Xena | The Old core API of Xena. Contains all of the core ERP functions | Yes |
-| Cars (Giulia) | All function relation to handling cars | No |
-| Cars (Giulia) | All function relation to handling cars | No |
-| Cars (Giulia) | All function relation to handling cars | No |
-| Cars (Giulia) | All function relation to handling cars | No |
-| Cars (Giulia) | All function relation to handling cars | No |
+| Name | Description | Support API keys | CQRS |
+| :--- | :--- | :--- | :--- |
+| Xena | The Old core API of Xena. Contains all of the core ERP functions | Yes | On some endpoints |
+| Cars (Giulia) | All function relation to handling cars | No | Yes |
+| Cars (Giulia) | All function relation to handling cars | No | Yes |
+| Cars (Giulia) | All function relation to handling cars | No | Yes |
+| Cars (Giulia) | All function relation to handling cars | No | Yes |
+| Cars (Giulia) | All function relation to handling cars | No | Yes |
 
 
 ## How to find the needed API 

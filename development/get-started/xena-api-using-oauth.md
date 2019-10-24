@@ -5,7 +5,7 @@ description: Introduction to our REST API.
 
 The baisc flow looks like this: 
 
-![Flow](/images/DeveloperConsole/api_call.png)
+![Flow](../../.gitbook/assets/api_call.png)
 
 1. User enters your app.
 2. The user encounters a place in your application where he want to use Xena API.
@@ -19,7 +19,7 @@ For more see [Identity Server sample clients](https://github.com/IdentityServer/
 ## Creation
 Firstly your app needs to be [registred](createapplication.md) in xena then in OAuth tab:
 
-![Xena Client Form](/images/DeveloperConsole/client_creating.png)
+![Xena Client Form](../../.gitbook/assets/client_creating.png)
 
 > You won't be able to change the grant type later on
 
@@ -40,7 +40,7 @@ Supported grant types:
 
 After the client creation you will be transfered to edit window with few new settings:
 
-![Xena Client Form](/images/DeveloperConsole/xena_client_form.png)
+![Xena Client Form](../../.gitbook/assets/xena_client_form.png)
 
 - Scopes - these are available for your app. The **testapi** scope is required for [**Xena API**](the-xena-api.md) communication.
 - RedirectUri - The uri of your oidc login endpoint. These **must match** in client and configuration. (For ASP default path is yourapp.com/signin-oidc)

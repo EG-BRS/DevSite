@@ -11,7 +11,7 @@ Using the Xena api you can create a new partner for use with X
 
 ## Create a new order
 
-Using the xena api you can create a new order and submit standared data for your bussness case.
+Using the xena api you can create a new order and submit standared data for your business case.
 
 ## Add invoice
 

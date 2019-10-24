@@ -13,6 +13,7 @@
   * [The Xena API](development/get-started/the-xena-api.md)
   * [Authorization](development/get-started/authorization.md)
   * [Using OAuth](development/get-started/using-oauth.md)
+  * [Using Xena Api with OAuth](development/get-started/xena-api-using-oauth.md)
   * [Using WebHooks](development/get-started/using-webhooks.md)
   * [Creating plugins](development/get-started/createplugin.md)
 * [Samples](development/samples.md)

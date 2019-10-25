@@ -4,7 +4,7 @@ description: How to register and submit your app to the app store.
 
 # Register your app
 
-Once you have [installed the Xena Developer app](installxenadeveloper.md) you can to to APPS &gt; DEVELOPER in the main menu. Here you will get a list of all the apps in the fiscal setup. If this is your first app this list will be empty.
+Once you have [installed the Xena Developer app](installxenadeveloper.md) you can go to APPS &gt; DEVELOPER in the main menu. Here you will get a list of all the apps in the fiscal setup. If this is your first app this list will be empty.
 
 To create an application for use in Xena you will need to register it. Registering your app ensures that ...
 

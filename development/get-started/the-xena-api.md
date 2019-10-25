@@ -26,31 +26,18 @@ OAuth:
 
 | Pros | Cons |
 | :--- | :--- |
-| Interact as the enduser, whatever the user can do, the app will be able to do.
- | Complex implementation compared to API-keys
- |
-| Cross-fiscalsetup actions possible.
- | Requires App in Xenas Appstore
- |
-| “One click” access for the user, no setup hassle.
- |  |
-| Role based security, your app will have the same role as the user using the app.
- |  |
-| License free \(No additional cost in Xena\)
- |  |
+| Interact as the enduser, whatever the user can do, the app will be able to do. | Complex implementation compared to API-keys |
+| Cross-fiscalsetup actions possible. | Requires App in Xenas Appstore |
+| “One click” access for the user, no setup hassle. | |
+| Role based security, your app will have the same role as the user using the app. | |
+| License free \(No additional cost in Xena\) | |
 
 #### 
 API keys:
 
 | Pros | Cons |
 | :--- | :--- |
-| Easy implementation compared to OAuth.
- | The user has to copy/paste API-keys to your app.
- |
-| It is optional to create an app in Xenas appstore
- | API-keys are licensed as normal user in Xena \(Adds cost to the user\).
- |
-|  | One API-key per fiscalsetup
- |
-|  | No access control. API-key is equal to the administrator role. |
-
+| Easy implementation compared to OAuth. | The user has to copy/paste API-keys to your app. |
+| It is optional to create an app in Xenas appstore |  API-keys are licensed as normal user in Xena(Adds cost to the user).|
+| | No access control. API-key is equal to the administrator role. 
+| | One API-key per fiscalsetup

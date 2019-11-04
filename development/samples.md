@@ -7,6 +7,7 @@ description: Use this sample code snippets to jump start your development in Xen
 We have prepered a few samples:
 
 * [Hybrid flow in ASP.NET core app](https://github.com/EG-BRS/Identity.Server.Sample.Dotnet/tree/master/HybridMVC.Core)
+* [Hybrid flow in ASP.NET classic app](https://github.com/EG-BRS/Identity.Server.Sample.Dotnet/tree/master/HybricMVC.NetFramework)
 * [Implicit flow in ASP.NET core app](https://github.com/EG-BRS/Identity.Server.Sample.Dotnet/tree/master/ImplicitMVC.Core)
 * [Implicit flow in javascript app](https://github.com/EG-BRS/Identity.Server.Sample.Dotnet/tree/master/ImplicitJavascript)
 

@@ -20,7 +20,7 @@ To create an application for use in Xena you will need to register it. Registeri
 
 ![The dialog for creating an app in Xena.](../../.gitbook/assets/createapp.PNG)
 
-3. Fill in the form with the **name** and a **short description** of your application. This information will help to inform potential users about what they can expect from your application.
+1. Fill in the form with the **name** and a **short description** of your application. This information will help to inform potential users about what they can expect from your application.
 
 You can also pick a **category** for your application so that we know where to display it in the app store.
 

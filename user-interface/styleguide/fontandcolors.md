@@ -10,6 +10,8 @@ Xena use default system fonts as to speed up loading. The UI will feel familiar 
 
 ## Colors
 
+Please refer to our [UX guidelines](../../the-possibilities/user-experience.md) on how to use colors.
+
 ### Primary colors
 
 | color | Color |

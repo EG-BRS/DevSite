@@ -17,11 +17,10 @@
   * [Using WebHooks](development/get-started/using-webhooks.md)
   * [Creating plugins](development/get-started/createplugin.md)
 * [Samples](development/samples.md)
-* [API documentation](api/overview.md)
-  * [Xena](api/xena.md)
-  * [Cars (Giulia)](api/giulia.md)
-  * [Articles & prices (Gaia)](api/gaia.md)
-
+* [API documentation](development/overview/README.md)
+  * [Xena](development/overview/xena.md)
+  * [Cars \(Giulia\)](development/overview/cars-giulia.md)
+  * [Articles & prices \(Gaia\)](development/overview/articles-and-prices-gaia.md)
 
 ## User interface
 

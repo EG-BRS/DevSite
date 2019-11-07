@@ -14,8 +14,6 @@ Xena has multiple ways to interact with external systems:
 * Integrate your Xena data with other business applications with [Direct API calls](development/get-started/the-xena-api.md) – request based
 * [Webhook callbacks](development/get-started/using-webhooks.md) - event based integration
 
-\[Video\]
-
 ### Feedback and support
 
 We have a Xena Developer Group on Stackoverflow. Here you can ask questions and help others to do awesome stuff.

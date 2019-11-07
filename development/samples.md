@@ -13,5 +13,5 @@ We have prepered a few samples:
 
 To run these samples you will have to [create an application in Xena](get-started/createapplication.md) and [configure it](get-started/xena-api-using-oauth.md).
 
-In the samples you will need to change [Client ID] and secret if you chose Hybrid flow. On the [Xena OAuth configuration](get-started/xena-api-using-oauth.md) page you will need to setup proper redirect uri.
+In the samples you will need to change \[Client ID\] and secret if you chose Hybrid flow. On the [Xena OAuth configuration](get-started/xena-api-using-oauth.md) page you will need to setup proper redirect uri.
 

@@ -8,7 +8,7 @@ Most features in Xena rely on user input. The most used layout for forms in Xena
 
 ## Label
 
-![Standard form](../../.gitbook/assets/form_standard.PNG)
+![Standard form with help text.](../../.gitbook/assets/form_standard.PNG)
 
 ```markup
 <div class="form-horizontal">
@@ -24,7 +24,7 @@ Most features in Xena rely on user input. The most used layout for forms in Xena
 
 Form input with an **illustrative icon**.
 
-![form Icon](../../.gitbook/assets/form_icon.PNG)
+![Form with illustrating icon.](../../.gitbook/assets/form_icon.PNG)
 
 ```markup
  <div class="form-horizontal">
@@ -42,7 +42,7 @@ Form input with an **illustrative icon**.
 
 Form input with an illustrative icon and **link add-on**.
 
-![Form Icon](../../.gitbook/assets/form_icon-label.PNG)
+![Form with illustrating icon and an inline link.](../../.gitbook/assets/form_icon-label.PNG)
 
 ```markup
 <div class="form-horizontal">
@@ -61,7 +61,7 @@ Form input with an illustrative icon and **link add-on**.
 
 Form input with an illustrative icon and **button add-on**.
 
-![Form with Icon and Button](../../.gitbook/assets/form_icon-button.PNG)
+![Form with illustrating icon and an inline button.](../../.gitbook/assets/form_icon-button.PNG)
 
 ```markup
  <div class="form-horizontal">
@@ -84,7 +84,7 @@ The above additions can be used in different combinations.
 
 ### Input group
 
-![Form Input group](../../.gitbook/assets/form_inputgroup.PNG)
+![Multiple form inputs in one group.](../../.gitbook/assets/form_inputgroup.PNG)
 
 ```markup
  <div class="form-horizontal">
@@ -135,7 +135,7 @@ Some form groups contains multiple inputs, like a delivery address. Notice the f
 
 Another situation: Different filers and search features. Here we often use form-inline.
 
-![Form Inline](../../.gitbook/assets/form_inline.PNG)
+![Inline form.](../../.gitbook/assets/form_inline.PNG)
 
 ```markup
 <div class="form-inline">
@@ -159,7 +159,7 @@ Another situation: Different filers and search features. Here we often use form-
 
 #### checkbox
 
-![Form Checkboxes](../../.gitbook/assets/form_checkboxes.PNG)
+![Checkboxes.](../../.gitbook/assets/form_checkboxes.PNG)
 
 ```markup
 <div class="form-horizontal">
@@ -194,7 +194,7 @@ Another situation: Different filers and search features. Here we often use form-
 
 #### Radiobuttons
 
-![Form Radiobuttons](../../.gitbook/assets/form_radiobuttons.PNG)
+![Radio buttons.](../../.gitbook/assets/form_radiobuttons.PNG)
 
 ```markup
 <div class="form-horizontal">

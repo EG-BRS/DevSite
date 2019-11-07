@@ -4,6 +4,11 @@ description: Panels are sections in the interface.
 
 # Panels
 
+## When to use panels
+
+* If you are creating a **simple plugin** you may not need panels but should just create a webpage with no "chrome", making use of the whole width.
+* If you are creating a **new view** for Xena, like a dashboard, you should create your own panels.
+
 ## Basic
 
 A panel is a section with header and div elements.

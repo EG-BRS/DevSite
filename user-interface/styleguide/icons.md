@@ -1,12 +1,16 @@
 ---
-description: We use the solid style of Font Awesome 5 Pro icons.
+description: We use the solid style of Font Awesome 5 icons.
 ---
 
 # Icons
 
-All the free icons are available for you when you use our stylesheet. For a complete overview, please refer to [https://fontawesome.com/icons?d=gallery&s=solid&m=free](https://fontawesome.com/icons?d=gallery&s=solid&m=free)
+{% hint style="warning" %}
+Icons are no longer part of our CSS for third parties. 
+{% endhint %}
 
-To paste an icon in your code, follow this pattern:
+We encoracge you to use the same set of icons as us. Most apps will be satisfied with the free version of Font Awesome 5. For a complete overview, please refer to [https://fontawesome.com/icons?d=gallery&s=solid&m=free](https://fontawesome.com/icons?d=gallery&s=solid&m=free)
+
+If you use the webfont solution, like us, you can paste icons like this:
 
 ```markup
 <i class="fas [icon name]"></i>

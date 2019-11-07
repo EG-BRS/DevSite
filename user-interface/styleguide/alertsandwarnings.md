@@ -40,7 +40,7 @@ Here they are represented in font color:
 
 Here they are represented in background color on lines:
 
-![Font Colors](../../.gitbook/assets/alerts_lines.PNG)
+![Font background colors.](../../.gitbook/assets/alerts_lines.PNG)
 
 ```markup
 <p class="bg-info">Info line.</p>

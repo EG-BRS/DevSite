@@ -8,7 +8,7 @@ description: >-
 
 ## Code
 
-Please refer to the other pages in the Get started section of our developer site.
+Please refer to the other pages in the [Get started](../development/get-started/) section of our developer site.
 
 ## Design 
 

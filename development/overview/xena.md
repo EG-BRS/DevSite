@@ -12,6 +12,7 @@ For a complete overview of the Xena API, please go to [https://xena.biz/api-doc/
 
 1. Starte by createing a new order:
 POST https://my.xena.biz/Api/Fiscal/{fiscalId}/Order
+```json
 {
 	"ContextType": "ContextType_Customer",
 	"PartnerId": null,
@@ -20,6 +21,7 @@ POST https://my.xena.biz/Api/Fiscal/{fiscalId}/Order
 	"CreateTask": true,
 	"InternalNote": null
 }
+```
 
 ContextType: Whether it should be a Sales order (ContextType_Customer) or Purchase order (ContextType_Supplier).
 PartnerId: Id of the Customer or Supplier on the order.
@@ -42,9 +44,11 @@ You will get a [PagedResultSet](https://github.com/EG-BRS/Xena.Contracts/blob/de
 
 Create a new orderTask:
 POST https://my.xena.biz/Api/Fiscal/98824/OrderTask
+```json
 {
   "OrderId": {your order id}
 }
+```
 Xena will return this model to you:
 https://github.com/EG-BRS/Xena.Contracts/blob/development/src/Xena.Contracts/Domain/OrderLineDto.cs
 

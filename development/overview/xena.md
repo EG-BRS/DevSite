@@ -162,6 +162,16 @@ Xena will return this model to you: https://github.com/EG-BRS/Xena.Contracts/blo
 }
 ```
 {% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=302 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}

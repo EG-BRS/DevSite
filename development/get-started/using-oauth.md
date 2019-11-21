@@ -12,8 +12,7 @@ Please refer to the github repository for the code in its entirety. This sample 
 
 First off we need to add the OpenId middleware to authentication configuration in `startup.cs`:
 
-{% tabs %}
-{% tab title="startup.cs" %}
+{% code title="startup.cs" %}
 ```csharp
  .AddOpenIdConnect(AuthenticationConstants.XenaOidcAuthenticationScheme, options =>
     {
@@ -37,8 +36,7 @@ First off we need to add the OpenId middleware to authentication configuration i
         options.ClaimActions.MapJsonKey(JwtClaimTypes.PreferredUserName, JwtClaimTypes.PreferredUserName);
     }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 All the configuration is set in `appsettings.Development.json`
 
@@ -54,8 +52,7 @@ In the sample we use automatic silent renew middleware that checks and refreshes
 
 In sample in `XenaService.cs` we show three API calls. The user can get data about his fiscal, Xena membership and apps that he is subscribed to.
 
-{% tabs %}
-{% tab title="XenaService.cs" %}
+{% code title="XenaService.cs" %}
 ```csharp
 [Authorize]
 public async Task<IActionResult> ApiExample()
@@ -65,6 +62,5 @@ public async Task<IActionResult> ApiExample()
     return result;
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 

@@ -198,7 +198,7 @@ Get order tasks
 {% endapi-method-summary %}
 
 {% api-method-description %}
-First you need to find the ordertask that you want to add the article to. If CreateTask was true when you created the order then the order will have one. To find the Id of that ordertask you need to get the list of order tasks. You will get a PagedResultSet with a list of this model in Entities back.
+First you need to find the order task that you want to add the article to. If CreateTask was true when you created the order then the order will have one. To find the Id of that ordertask you need to get the list of order tasks. You will get a PagedResultSet with a list of this OrderTaskDTO in Entities back.
 {% endapi-method-description %}
 
 {% api-method-spec %}

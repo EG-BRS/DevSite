@@ -10,7 +10,14 @@ For a complete overview of the Xena API, please go to [https://xena.biz/api-doc/
 
 ## How to create an order and add articles
 
-In this section we will show you how to create an order and add an article to the order.
+In this section we will show you how to create an order and add an article to that order. This can be done with the following steps:
+
+1. Create the order
+2. Finde the ordetask or add an ordertask
+3. Add a line to the order
+4. Update the orderline the the article
+
+In the following sections we will describe the needed endpoints
 
 {% api-method method="post" host="https://my.xena.biz/Api/Fiscal/{fiscalId}" path="/Order" %}
 {% api-method-summary %}
@@ -53,7 +60,7 @@ Whether it should be a Sales order \(ContextType\_Customer\) or Purchase order \
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Xena will return this model to you: https://github.com/EG-BRS/Xena.Contracts/blob/development/src/Xena.Contracts/Domain/OrderDto.cs
+
 {% endapi-method-response-example-description %}
 
 ```
@@ -180,7 +187,10 @@ Xena will return this model to you: https://github.com/EG-BRS/Xena.Contracts/blo
 Save the Id - you will need it later.
 {% endhint %}
 
-Now you are ready to get the available tasks and add articles to them.
+You can find the full DTO here:  
+[https://github.com/EG-BRS/Xena.Contracts/blob/development/src/Xena.Contracts/Domain/OrderDto.cs](https://github.com/EG-BRS/Xena.Contracts/blob/development/src/Xena.Contracts/Domain/OrderDto.cs)
+
+Articles/lines are add not added directly to the order but to an order task. One order can have seval order tasks. The next step is the get the tasks and add articles to them.
 
 {% api-method method="get" host="https://my.xena.biz/Api/Fiscal/{fiscalId}" path="/Order/{orderId}/OrderTask?ForceNoPaging=true&Page=0&PageSize=100&ShowDeactivated=false" %}
 {% api-method-summary %}
@@ -188,14 +198,14 @@ Get order tasks
 {% endapi-method-summary %}
 
 {% api-method-description %}
-First you need to find the ordertask that you want to add the article to. If CreateTask was true when you created the order. Then you need to find the Id of that ordertask else you need to create a new one.
+First you need to find the ordertask that you want to add the article to. If CreateTask was true when you created the order then the order will have one. To find the Id of that ordertask you need to get the list of order tasks. You will get a PagedResultSet with a list of this model in Entities back.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-parameter name="orderId" type="string" required=false %}
+Internal order id
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 {% endapi-method-request %}
@@ -207,27 +217,78 @@ First you need to find the ordertask that you want to add the article to. If Cre
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+	"Count": 1,
+	"Entities": [{
+		"Version": 1,
+		"IsDeactivated": false,
+		"FiscalSetupId": 98824,
+		"CreatedAt": "2019-11-25T18:37:10.673Z",
+		"OrderId": 520562489,
+		"OrderContextType": "ContextType_Customer",
+		"PrintDetails": false,
+		"Details": "",
+		"Description": "",
+		"OrderTaskStatusId": 196020703,
+		"Totals": {
+			"PriceNettTotal": 0.0,
+			"CostTotal": 0.0,
+			"DiscountTotalRatio": 0.0,
+			"DiscountTotalPct": 0.0,
+			"DiscountTotal": 0.0,
+			"MarginTotal": 0.0,
+			"MarginTotalRatio": 0.0,
+			"MarginTotalPct": 0.0,
+			"VatEstTotal": 0.0
+		},
+		"Address": {
+			"City": "",
+			"CountryName": "DK",
+			"PlaceName": "",
+			"Street": "",
+			"Zip": "",
+			"Name": "",
+			"Description": " -  ",
+			"CountryDisplayName": "Denmark"
+		},
+		"DeliveryAddress": null,
+		"OrderTaskStatusName": "Igangværende",
+		"OrderTaskStatusColor": "#9cce6f",
+		"OrderNumber": 200015,
+		"Index": 1,
+		"SubscriptionId": null,
+		"IsInvoiced": false,
+		"IsDelivered": false,
+		"IsConfirmed": false,
+		"IsReadonly": false,
+		"Abbreviation": "200015-1",
+		"ProjectId": null,
+		"ProjectClosedDateDays": null,
+		"AppointmentCount": 0,
+		"IsPlanned": false,
+		"Id": 520556331
+	}]
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="https://my.xena.biz/Api/Fiscal/{fiscalId}" path="/OrderTask" %}
+{% api-method method="get" host="https://my.xena.biz/Api/Fiscal/{fiscalId}" path="/OrderTask" %}
 {% api-method-summary %}
-Add an order task
+Find an order task
 {% endapi-method-summary %}
 
 {% api-method-description %}
-
+If there are no ordertasks on the order or you want to create a new one. Then you can use this endpoint.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter type="integer" name="OrderId" required=true %}
-Your order task id here
+Id for the order you want to create an ordertask on
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 {% endapi-method-request %}
@@ -235,7 +296,7 @@ Your order task id here
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Xena will return this model to you: https://github.com/EG-BRS/Xena.Contracts/blob/development/src/Xena.Contracts/Domain/OrderLineDto.cs
+Xena will return this model to you: 
 {% endapi-method-response-example-description %}
 
 ```
@@ -252,30 +313,78 @@ You should save the Id.
 
 {% api-method method="post" host="https://my.xena.biz/Api/Fiscal/{fiscalId}" path="/OrderLine" %}
 {% api-method-summary %}
-Add article to order task
+Create an order task line
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Now you are ready to add an article to the ordertask. To do this, you will need the id of the article and to create an ordertaskline. Here I assume you got an article id.
+Now you are ready to add an article to the order task. To do this, you will need the id of the article and to create an ordertaskline. Here I assume you got an article id. Start by creating a new order task line.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter type="integer" name="OrderTaskId" required=true %}
-Your order task id here
+{% api-method-body-parameters %}
+{% api-method-parameter name="OrderId" type="string" required=false %}
+
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-This will return this model. You should save the data since you will need it when updating the line with the article id.
+You should save the data since you will need it when updating the line with the article id.
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+	"Version": 1,
+	"IsDeactivated": false,
+	"FiscalSetupId": 98824,
+	"CreatedAt": "2019-11-25T19:05:54.163Z",
+	"OrderId": 520562489,
+	"OrderContextType": "ContextType_Customer",
+	"PrintDetails": false,
+	"Details": "",
+	"Description": "",
+	"OrderTaskStatusId": 196020703,
+	"Totals": {
+		"PriceNettTotal": 0.0,
+		"CostTotal": 0.0,
+		"DiscountTotalRatio": 0.0,
+		"DiscountTotalPct": 0.0,
+		"DiscountTotal": 0.0,
+		"MarginTotal": 0.0,
+		"MarginTotalRatio": 0.0,
+		"MarginTotalPct": 0.0,
+		"VatEstTotal": 0.0
+	},
+	"Address": {
+		"City": "",
+		"CountryName": "DK",
+		"PlaceName": "",
+		"Street": "",
+		"Zip": "",
+		"Name": "",
+		"Description": " -  ",
+		"CountryDisplayName": "Denmark"
+	},
+	"DeliveryAddress": null,
+	"OrderTaskStatusName": "Igangværende",
+	"OrderTaskStatusColor": "#9cce6f",
+	"OrderNumber": 200015,
+	"Index": 2,
+	"SubscriptionId": null,
+	"IsInvoiced": false,
+	"IsDelivered": false,
+	"IsConfirmed": false,
+	"IsReadonly": false,
+	"Abbreviation": "200015-2",
+	"ProjectId": null,
+	"ProjectClosedDateDays": null,
+	"AppointmentCount": 0,
+	"IsPlanned": false,
+	"Id": 520556332
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -288,14 +397,14 @@ Update a task line
 {% endapi-method-summary %}
 
 {% api-method-description %}
-To update the line make the following request. The important field are `ArticleId`, `Quantity` and `Description`. See the full model here.
+To update the line make the this request. The important field are `ArticleId`, `Quantity` and `Description`. See the full model here.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-parameter name="orderlineId" type="integer" required=false %}
+Id of the line order you want to update
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 {% endapi-method-request %}
@@ -307,33 +416,72 @@ To update the line make the following request. The important field are `ArticleI
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+	"Version": 2,
+	"IsDeactivated": false,
+	"FiscalSetupId": 98824,
+	"CreatedAt": "2019-11-25T19:18:42.527Z",
+	"LocationId": null,
+	"OrderInvoiceTaskId": null,
+	"OrderTaskId": 520556332,
+	"OrderId": 520562489,
+	"ProjectId": null,
+	"Index": 0,
+	"ArticleId": 195803359,
+	"InvoiceDateDays": null,
+	"CostEach": 0.00000,
+	"Description": "Ydelser sats 1",
+	"PriceEach": 0.00000,
+	"Quantity": 1.00000,
+	"UnitId": 195796629,
+	"PayerId": null,
+	"PayerAccountNumber": null,
+	"UnitAbbreviation": "timer",
+	"ArticleNumber": "yde1",
+	"Totals": {
+		"PriceNettTotal": 0.00000,
+		"CostTotal": 0.00000,
+		"DiscountTotalRatio": 0.0,
+		"DiscountTotalPct": 0.0,
+		"DiscountTotal": 0.00000,
+		"MarginTotal": 0.00000,
+		"MarginTotalRatio": 0.0,
+		"MarginTotalPct": 0.0,
+		"VatEstTotal": 0.00000
+	},
+	"ArticleGroupId": 195796691,
+	"ArticleVariantId": null,
+	"ArticleGroupDescription": "Ydelser",
+	"ArticleHasInventoryManagement": false,
+	"ArticleHasVariants": false,
+	"ArticleInternalNote": null,
+	"ArticleIsBundle": false,
+	"ArticleVariantAbbreviation": null,
+	"ArticleWeight": null,
+	"LocationAbbreviation": null,
+	"ArticleStatus": null,
+	"OrderDeliveryTransactionId": null,
+	"ArticleMappingId": null,
+	"ArticleMappingQuantity": null,
+	"PartnerArticleNumber": null,
+	"IsConfirmed": false,
+	"ArticleAbbreviation": "yde1",
+	"IsDelivered": false,
+	"ArticleIsDeactivated": false,
+	"AverageCostPrice": null,
+	"EstimatedCostTotal": 0.00000,
+	"OrderLineStatusColor": null,
+	"OrderLineStatusName": null,
+	"HasLinkedLines": false,
+	"Id": 520557490
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
 
-1. Starte by createing a new order:
 
-   POST [https://my.xena.biz/Api/Fiscal/{fiscalId}/Order](https://my.xena.biz/Api/Fiscal/{fiscalId}/Order)
-
-   ```javascript
-   {
-    "ContextType": "ContextType_Customer",
-    "PartnerId": null,
-    "ProjectId": null,
-    "OrderNumber": null,
-    "CreateTask": true,
-    "InternalNote": null
-   }
-   ```
-
-ContextType: Whether it should be a Sales order \(ContextType\_Customer\) or Purchase order \(ContextType\_Supplier\). PartnerId: Id of the Customer or Supplier on the order. ProjectId: Id of the assosiated project. Only relavant for users of the project mdule. OrderNumber: This should be null. Only set this if you know what you are doing! This can be relavant if the order is born with a number in some other system \(Eg. a webshop\). CreateTask: If true an ordertask will be created. InternalNote: Just the internal note.
-
-Xena will return this model to you: [https://github.com/EG-BRS/Xena.Contracts/blob/development/src/Xena.Contracts/Domain/OrderDto.cs](https://github.com/EG-BRS/Xena.Contracts/blob/development/src/Xena.Contracts/Domain/OrderDto.cs)
-
-You should save the Id. This you will need later.
 
 1. Add a article to the order
 

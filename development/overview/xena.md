@@ -187,8 +187,7 @@ Whether it should be a Sales order \(ContextType\_Customer\) or Purchase order \
 Save the Id - you will need it later.
 {% endhint %}
 
-You can find the full DTO here:  
-[https://github.com/EG-BRS/Xena.Contracts/blob/development/src/Xena.Contracts/Domain/OrderDto.cs](https://github.com/EG-BRS/Xena.Contracts/blob/development/src/Xena.Contracts/Domain/OrderDto.cs)
+You can find the full DTO [here](https://github.com/EG-BRS/Xena.Contracts/blob/development/src/Xena.Contracts/Domain/OrderDto.cs)
 
 Articles/lines are add not added directly to the order but to an order task. One order can have seval order tasks. The next step is the get the tasks and add articles to them.
 
@@ -198,7 +197,7 @@ Get order tasks
 {% endapi-method-summary %}
 
 {% api-method-description %}
-First you need to find the order task that you want to add the article to. If CreateTask was true when you created the order then the order will have one. To find the Id of that ordertask you need to get the list of order tasks. You will get a PagedResultSet with a list of this OrderTaskDTO in Entities back.
+First you need to find the ordertask that you want to add the article to. If CreateTask was true when you created the order then the order will have one. To find the Id of that ordertask you need to get the list of order tasks. You will get a [PagedResultSet](https://github.com/EG-BRS/Xena.Contracts/blob/development/src/Xena.Contracts/Helpers/PagedResultSet.cs) with a list of [OrderTaskDTO](https://github.com/EG-BRS/Xena.Contracts/blob/development/src/Xena.Contracts/Domain/OrderTaskDto.cs) in Entities property from the endpoint.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -274,6 +273,8 @@ Internal order id
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+test
 
 {% api-method method="get" host="https://my.xena.biz/Api/Fiscal/{fiscalId}" path="/OrderTask" %}
 {% api-method-summary %}

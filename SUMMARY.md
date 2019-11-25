@@ -35,6 +35,7 @@
   * [Forms](user-interface/styleguide/forms.md)
   * [Icons](user-interface/styleguide/icons.md)
   * [Layout](user-interface/styleguide/layout.md)
+  * [Modals](user-interface/styleguide/modals.md)
   * [Pagination](user-interface/styleguide/pagination.md)
   * [Panels](user-interface/styleguide/panels.md)
   * [Tables](user-interface/styleguide/tables.md)

@@ -170,12 +170,26 @@ Whether it should be a Sales order \(ContextType\_Customer\) or Purchase order \
 
 {% api-method-response-example httpCode=302 %}
 {% api-method-response-example-description %}
-
+Beskrivelse xxx
 {% endapi-method-response-example-description %}
 
-```text
-
+{% tabs %}
+{% tab title="OK" %}
 ```
+{
+ok json
+}
+```
+{% endtab %}
+
+{% tab title="Error" %}
+```
+{
+error json
+}
+```
+{% endtab %}
+{% endtabs %}
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}

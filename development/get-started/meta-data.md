@@ -18,7 +18,7 @@ Insert MetaData
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Inserts an instance of MetaData. If the instance exists it will be overwritten.
+Inserts an instance of MetaData. NB: If the instance exists it will be overwritten
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -51,7 +51,7 @@ The app id
 ```
 {
 	"Success" = true, 
-	"AssignedId" = "" // Id stucture: {entityType}_{fiscalId}_{entityId}_{xenaAppId}
+	"AssignedId" = "" // {entityType}_{fiscalId}_{entityId}_{xenaAppId}
 }
 ```
 {% endtab %}
@@ -59,7 +59,7 @@ The app id
 ```
 {
 	"Success" = false, 
-	"Errors" = ["", ""]
+	"Errors" = ["Error1", "Error2"]
 }
 ```
 {% endtab %}
@@ -75,7 +75,7 @@ Update MetaData
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Updates an instance of MetaData. If the instance does not exist it will be inserted.
+Updates an instance of MetaData. NB: If the instance does not exist it will be inserted
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -108,7 +108,7 @@ The app id
 ```
 {
 	"Success" = true, 
-	"AssignedId" = "" // Id stucture: {entityType}_{fiscalId}_{entityId}_{xenaAppId}
+	"AssignedId" = "" // {entityType}_{fiscalId}_{entityId}_{xenaAppId}
 }
 ```
 {% endtab %}
@@ -116,7 +116,7 @@ The app id
 ```
 {
 	"Success" = false, 
-	"Errors" = ["", ""]
+	"Errors" = ["Error1", "Error2"]
 }
 ```
 {% endtab %}
@@ -165,7 +165,7 @@ The app id
 ```
 {
 	"Success" = false, 
-	"Errors" = ["", ""]
+	"Errors" = ["Error1", "Error2"]
 }
 ```
 {% endtab %}
@@ -186,11 +186,11 @@ Each app can store one or more custom data instances of different custom types.
 
 {% api-method method="post" host="https://my.xena.biz/Api/Fiscal/{fiscalId}" path="/Api/Fiscal/{fiscalId}/XenaCustomData/{xenaAppId}/{customType}" %}
 {% api-method-summary %}
-Insert CustomData.
+Insert CustomData
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Inserts an instance of CustomData.
+Inserts an instance of CustomData
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -228,7 +228,7 @@ The app-specific type
 ```
 {
 	"Success" = false, 
-	"Errors" = ["", ""]
+	"Errors" = ["Error1", "Error2"]
 }
 ```
 {% endtab %}
@@ -240,11 +240,11 @@ The app-specific type
 
 {% api-method method="put" host="https://my.xena.biz/Api/Fiscal/{fiscalId}" path="/Api/Fiscal/{fiscalId}/XenaCustomData/{xenaAppId}/{customType}/{id}" %}
 {% api-method-summary %}
-Update CustomData.
+Update CustomData
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Updates an instance of CustomData.
+Updates an instance of CustomData
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -284,7 +284,7 @@ The instance id
 ```
 {
 	"Success" = false, 
-	"Errors" = ["", ""]
+	"Errors" = ["Error1", "Error2"]
 }
 ```
 {% endtab %}
@@ -333,7 +333,7 @@ The instance id
 ```
 {
 	"Success" = false, 
-	"Errors" = ["", ""]
+	"Errors" = ["Error1", "Error2"]
 }
 ```
 {% endtab %}
@@ -376,7 +376,10 @@ The instance id
 {% tab title="OK" %}
 ```
 {
-	"Results" = [{ ...The app-specific json body here... }, { ...The app-specific json body here... }],
+	"Results" = [
+		{ ...The app-specific json body here... }, 
+		{ ...The app-specific json body here... }
+	],
 	"Any" = true|false
 }
 ```
@@ -385,7 +388,7 @@ The instance id
 ```
 {
 	"Success" = false, 
-	"Errors" = ["", ""]
+	"Errors" = ["Error1", "Error2"]
 }
 ```
 {% endtab %}

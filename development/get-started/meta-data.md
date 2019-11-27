@@ -7,7 +7,7 @@ Both Meta and Custom data has no predefined structure of the data it stores. Wha
 ## MetaData
 
 {% hint style="info" %}
-For a complete overview of the MetaData methods, please go to [https://xena.biz/api-doc/general/#/Developer%20-%20ApiXenaAppMetaData)
+For a complete overview of the MetaData methods, please go to [https://xena.biz/api-doc/general/#/Developer%20-%20ApiXenaAppMetaData](https://xena.biz/api-doc/general/#/Developer%20-%20ApiXenaAppMetaData)
 {% endhint %}
 
 Each app can store its own MetaData related to a specific entity in Xena (fiscalsetup, order, partner, appointment, article, or ledgertag). The MetaData from each app is also indexed so it is searchable. NB: Each app can only store one instance per entity.

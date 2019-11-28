@@ -397,5 +397,3 @@ The instance id
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-

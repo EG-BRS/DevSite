@@ -1,4 +1,4 @@
-# Using Meta data
+# Using MetaData and CustomData
 
 In Xena apps are able to store two distinct types of data - MetaData and CustomData. MetaData is extra/app-specific data related to a specific entity in Xena. CustomData can be used for almost anything and can act as a kind of small data storage for the app.
 
@@ -10,7 +10,19 @@ Both Meta and Custom data has no predefined structure of the data it stores. Wha
 For a complete overview of the MetaData methods, please go to [https://xena.biz/api-doc/general/\#/Developer - ApiXenaAppMetaData](https://xena.biz/api-doc/general/#/Developer%20-%20ApiXenaAppMetaData)
 {% endhint %}
 
-Each app can store its own MetaData related to a specific entity in Xena \(fiscalsetup, order, partner, appointment, article, or ledgertag\). The MetaData from each app is also indexed so it is searchable. NB: Each app can only store one instance per entity.
+Each app can store its own MetaData related to a specific entity in Xena:
+
+* fiscalsetup 
+* order
+* partner 
+* article
+* ledgertag
+
+The MetaData from each app is also indexed so it is searchable. If you need MetaData on other entities then contact us and we might add it.
+
+{% hint style="warning" %}
+Each app can only store one instance per entity.
+{% endhint %}
 
 {% api-method method="post" host="https://my.xena.biz/Api/Fiscal/{fiscalId}" path="/XenaAppMetaData/{entityType}/{entityId}/{xenaAppId}" %}
 {% api-method-summary %}
@@ -25,7 +37,7 @@ Inserts an instance of MetaData. NB: If the instance exists it will be overwritt
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="entityType" type="string" required=true %}
-The entity type. Supported entity types: fiscalsetup, order, partner, appointment, article, ledgertag
+The entity type. Supported entity types: fiscalsetup, order, partner, article, ledgertag
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="entityId" type="long" required=true %}
@@ -81,7 +93,7 @@ Updates an instance of MetaData. NB: If the instance does not exist it will be i
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="entityType" type="string" required=true %}
-The entity type. Supported entity types: fiscalsetup, order, partner, appointment, article, ledgertag
+The entity type. Supported entity types: fiscalsetup, order, partner, article, ledgertag
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="entityId" type="long" required=true %}
@@ -137,7 +149,7 @@ Gets a specific MetaData
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="entityType" type="string" required=true %}
-The entity type. Supported entity types: fiscalsetup, order, partner, appointment, article, ledgertag
+The entity type. Supported entity types: fiscalsetup, order, partner, article, ledgertag
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="entityId" type="long" required=true %}

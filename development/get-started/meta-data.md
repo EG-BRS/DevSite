@@ -1,4 +1,4 @@
-# Using Meta and Custom data
+# Using Meta data
 
 In Xena apps are able to store two distinct types of data - MetaData and CustomData. MetaData is extra/app-specific data related to a specific entity in Xena. CustomData can be used for almost anything and can act as a kind of small data storage for the app.
 
@@ -7,10 +7,10 @@ Both Meta and Custom data has no predefined structure of the data it stores. Wha
 ## MetaData
 
 {% hint style="info" %}
-For a complete overview of the MetaData methods, please go to [https://xena.biz/api-doc/general/#/Developer - ApiXenaAppMetaData](https://xena.biz/api-doc/general/#/Developer%20-%20ApiXenaAppMetaData)
+For a complete overview of the MetaData methods, please go to [https://xena.biz/api-doc/general/\#/Developer - ApiXenaAppMetaData](https://xena.biz/api-doc/general/#/Developer%20-%20ApiXenaAppMetaData)
 {% endhint %}
 
-Each app can store its own MetaData related to a specific entity in Xena (fiscalsetup, order, partner, appointment, article, or ledgertag). The MetaData from each app is also indexed so it is searchable. NB: Each app can only store one instance per entity.
+Each app can store its own MetaData related to a specific entity in Xena \(fiscalsetup, order, partner, appointment, article, or ledgertag\). The MetaData from each app is also indexed so it is searchable. NB: Each app can only store one instance per entity.
 
 {% api-method method="post" host="https://my.xena.biz/Api/Fiscal/{fiscalId}" path="/XenaAppMetaData/{entityType}/{entityId}/{xenaAppId}" %}
 {% api-method-summary %}
@@ -27,18 +27,15 @@ Inserts an instance of MetaData. NB: If the instance exists it will be overwritt
 {% api-method-parameter name="entityType" type="string" required=true %}
 The entity type. Supported entity types: fiscalsetup, order, partner, appointment, article, ledgertag
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="entityId" type="long" required=true %}
 The entity id
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="xenaAppId" type="long" required=true %}
 The app id
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
-{% api-method-request-example %}
-```
-{ ...The app-specific json body here... }
-```
-{% endapi-method-request-example %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -46,20 +43,22 @@ The app id
 {% api-method-response-example-description %}
 
 {% endapi-method-response-example-description %}
+
 {% tabs %}
 {% tab title="OK" %}
-```
+```text
 {
-	"Success" = true, 
-	"AssignedId" = "" // {entityType}_{fiscalId}_{entityId}_{xenaAppId}
+    "Success" = true, 
+    "AssignedId" = "" // {entityType}_{fiscalId}_{entityId}_{xenaAppId}
 }
 ```
 {% endtab %}
+
 {% tab title="Error" %}
-```
+```text
 {
-	"Success" = false, 
-	"Errors" = ["Error1", "Error2"]
+    "Success" = false, 
+    "Errors" = ["Error1", "Error2"]
 }
 ```
 {% endtab %}
@@ -84,18 +83,15 @@ Updates an instance of MetaData. NB: If the instance does not exist it will be i
 {% api-method-parameter name="entityType" type="string" required=true %}
 The entity type. Supported entity types: fiscalsetup, order, partner, appointment, article, ledgertag
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="entityId" type="long" required=true %}
 The entity id
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="xenaAppId" type="long" required=true %}
 The app id
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
-{% api-method-request-example %}
-```
-{ ...The app-specific json body here... }
-```
-{% endapi-method-request-example %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -103,20 +99,22 @@ The app id
 {% api-method-response-example-description %}
 
 {% endapi-method-response-example-description %}
+
 {% tabs %}
 {% tab title="OK" %}
-```
+```text
 {
-	"Success" = true, 
-	"AssignedId" = "" // {entityType}_{fiscalId}_{entityId}_{xenaAppId}
+    "Success" = true, 
+    "AssignedId" = "" // {entityType}_{fiscalId}_{entityId}_{xenaAppId}
 }
 ```
 {% endtab %}
+
 {% tab title="Error" %}
-```
+```text
 {
-	"Success" = false, 
-	"Errors" = ["Error1", "Error2"]
+    "Success" = false, 
+    "Errors" = ["Error1", "Error2"]
 }
 ```
 {% endtab %}
@@ -141,9 +139,11 @@ Gets a specific MetaData
 {% api-method-parameter name="entityType" type="string" required=true %}
 The entity type. Supported entity types: fiscalsetup, order, partner, appointment, article, ledgertag
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="entityId" type="long" required=true %}
 The entity id
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="xenaAppId" type="long" required=true %}
 The app id
 {% endapi-method-parameter %}
@@ -155,17 +155,19 @@ The app id
 {% api-method-response-example-description %}
 
 {% endapi-method-response-example-description %}
+
 {% tabs %}
 {% tab title="OK" %}
-```
+```text
 { ...The app-specific json body here... }
 ```
 {% endtab %}
+
 {% tab title="Error" %}
-```
+```text
 {
-	"Success" = false, 
-	"Errors" = ["Error1", "Error2"]
+    "Success" = false, 
+    "Errors" = ["Error1", "Error2"]
 }
 ```
 {% endtab %}
@@ -175,11 +177,10 @@ The app id
 {% endapi-method-spec %}
 {% endapi-method %}
 
-
 ## CustomData
 
 {% hint style="info" %}
-For a complete overview of the CustomData methods, please go to [https://xena.biz/api-doc/general/#/Developer - ApiXenaCustomData](https://xena.biz/api-doc/general/#/Developer%20-%20ApiXenaCustomData)
+For a complete overview of the CustomData methods, please go to [https://xena.biz/api-doc/general/\#/Developer - ApiXenaCustomData](https://xena.biz/api-doc/general/#/Developer%20-%20ApiXenaCustomData)
 {% endhint %}
 
 Each app can store one or more custom data instances of different custom types.
@@ -199,15 +200,11 @@ Inserts an instance of CustomData
 {% api-method-parameter name="xenaAppId" type="long" required=true %}
 The app id
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="customType" type="string" required=true %}
 The app-specific type
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
-{% api-method-request-example %}
-```
-{ ...The app-specific json body here... }
-```
-{% endapi-method-request-example %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -215,20 +212,22 @@ The app-specific type
 {% api-method-response-example-description %}
 
 {% endapi-method-response-example-description %}
+
 {% tabs %}
 {% tab title="OK" %}
-```
+```text
 {
-	"Success" = true, 
-	"AssignedId" = "" // Guid
+    "Success" = true, 
+    "AssignedId" = "" // Guid
 }
 ```
 {% endtab %}
+
 {% tab title="Error" %}
-```
+```text
 {
-	"Success" = false, 
-	"Errors" = ["Error1", "Error2"]
+    "Success" = false, 
+    "Errors" = ["Error1", "Error2"]
 }
 ```
 {% endtab %}
@@ -253,18 +252,15 @@ Updates an instance of CustomData
 {% api-method-parameter name="xenaAppId" type="long" required=true %}
 The app id
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="customType" type="string" required=true %}
 The app-specific type
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="id" type="Guid" required=true %}
 The instance id
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
-{% api-method-request-example %}
-```
-{ ...The app-specific json body here... }
-```
-{% endapi-method-request-example %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -272,19 +268,21 @@ The instance id
 {% api-method-response-example-description %}
 
 {% endapi-method-response-example-description %}
+
 {% tabs %}
 {% tab title="OK" %}
-```
+```text
 {
-	"Success" = true
+    "Success" = true
 }
 ```
 {% endtab %}
+
 {% tab title="Error" %}
-```
+```text
 {
-	"Success" = false, 
-	"Errors" = ["Error1", "Error2"]
+    "Success" = false, 
+    "Errors" = ["Error1", "Error2"]
 }
 ```
 {% endtab %}
@@ -309,9 +307,11 @@ Gets a specific CustomData
 {% api-method-parameter name="xenaAppId" type="long" required=true %}
 The app id
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="customType" type="string" required=true %}
 The app-specific type
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="id" type="Guid" required=true %}
 The instance id
 {% endapi-method-parameter %}
@@ -323,17 +323,19 @@ The instance id
 {% api-method-response-example-description %}
 
 {% endapi-method-response-example-description %}
+
 {% tabs %}
 {% tab title="OK" %}
-```
+```text
 { ...The app-specific json body here... }
 ```
 {% endtab %}
+
 {% tab title="Error" %}
-```
+```text
 {
-	"Success" = false, 
-	"Errors" = ["Error1", "Error2"]
+    "Success" = false, 
+    "Errors" = ["Error1", "Error2"]
 }
 ```
 {% endtab %}
@@ -358,9 +360,11 @@ Lists CustomDatas
 {% api-method-parameter name="xenaAppId" type="long" required=true %}
 The app id
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="customType" type="string" required=true %}
 The app-specific type
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="id" type="Guid" required=true %}
 The instance id
 {% endapi-method-parameter %}
@@ -372,23 +376,25 @@ The instance id
 {% api-method-response-example-description %}
 
 {% endapi-method-response-example-description %}
+
 {% tabs %}
 {% tab title="OK" %}
-```
+```text
 {
-	"Results" = [
-		{ ...The app-specific json body here... }, 
-		{ ...The app-specific json body here... }
-	],
-	"Any" = true|false
+    "Results" = [
+        { ...The app-specific json body here... }, 
+        { ...The app-specific json body here... }
+    ],
+    "Any" = true|false
 }
 ```
 {% endtab %}
+
 {% tab title="Error" %}
-```
+```text
 {
-	"Success" = false, 
-	"Errors" = ["Error1", "Error2"]
+    "Success" = false, 
+    "Errors" = ["Error1", "Error2"]
 }
 ```
 {% endtab %}
@@ -397,3 +403,4 @@ The instance id
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+

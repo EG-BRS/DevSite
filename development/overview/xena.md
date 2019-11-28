@@ -6,6 +6,408 @@ For a complete overview of the Xena API, please go to [https://xena.biz/api-doc/
 
 ## How the create a partner
 
+A partner in Xena can be used as a creditor, debtor and/or employee. The idea behind this is to avoid duplicate data and to give our customers a better overview of all of their business with a specific partner. If a partner is a creditor then the partner will have a customer context connected. If a partner is a debtor then the partner will have a supplier context connected. A partner can have more than one context. When you make a lookup on a specific partner. Then you will get info about the contexts associated.
+
+```javascript
+GET https://my.xena.biz/Api/Fiscal/{fiscalId}/Partner/{partnerId}
+{
+	...
+	"SupplierId": {Supplier context id},
+	"CustomerId": {customer context id},
+	"ResourceId": {resource context id},
+	...
+}
+```
+
+This is important to understand when you are creating a new partner. If you use the default endpoint then the partner will be created without any contexts.
+
+{% hint style="info" %}
+There are two ways to creating a partner. The first method requires two API calls. The second method can only create a customer or supplier but only requires one API call.
+{% endhint %}
+
+{% api-method method="post" host="https://my.xena.biz" path="/Api/Fiscal/{fiscalId}/Partner" %}
+{% api-method-summary %}
+Create a partner without any context
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Create a basic partner without any customer or supplier context. See the full dto here:  
+https://github.com/EG-BRS/Xena.Contracts/blob/development/src/Xena.Contracts/Domain/PartnerDto.cs
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="FiscalId" type="string" required=false %}
+Id of the fiscal you want to create the partner in
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="DefaultDeliveryAddressId" type="string" required=false %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Address" type="object" required=false %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="ReferenceUserId" type="integer" required=false %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Attention" type="string" required=false %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="PartnerType" type="string" required=false %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="PhoneNumber" type="string" required=false %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Note" type="string" required=false %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="GLNNumber" type="string" required=false %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="OrgNumber" type="string" required=false %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="SupplierId" type="integer" required=false %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="CustomerId" type="integer" required=false %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="ResourceId" type="integer" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+	"Version": 1,
+	"IsDeactivated": false,
+	"FiscalSetupId": 97190,
+	"CreatedAt": "2019-11-26T10:25:53.307Z",
+	"AccountNumber": 10229,
+	"Address": {
+		"City": "Aarhus",
+		"CountryName": null,
+		"PlaceName": "string",
+		"Street": "string",
+		"Zip": "8000",
+		"Name": "string",
+		"Description": "string - string, 8000 Aarhus",
+		"CountryDisplayName": null
+	},
+	"ReferenceFiscalSetupId": null,
+	"ReferenceUserId": null,
+	"Attention": "string",
+	"PartnerType": "xena_partnertype_company",
+	"PartnerTypeTranslated": "Company",
+	"PhoneNumber": "string",
+	"Note": "string",
+	"URL": null,
+	"GLNNumber": "string",
+	"OrgNumber": "string",
+	"SupplierId": null,
+	"CustomerId": null,
+	"ResourceId": null,
+	"DefaultDeliveryAddressId": null,
+	"ShortDescription": "10229",
+	"LongDescription": "10229 - string",
+	"Tags": [],
+	"Id": 520618279
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+This will create a new partner in Xena. In Xena the partner can be converted to a customer, supplier oo/and employee. If you want to add a context you can use the following endpoint.
+
+{% api-method method="post" host="https://my.xena.biz" path="/Api/Fiscal/{fiscalId}/PartnerContext" %}
+{% api-method-summary %}
+Create a partner context
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Create a supplier or customer context for a given partner.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-body-parameters %}
+{% api-method-parameter name="ContextType" type="string" required=false %}
+ContextType\_Customer or ContextType\_Supplier
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="PartnerId" type="integer" required=false %}
+Id of the partner
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="InvoiceEmail" type="string" required=false %}
+The email that will be suggested when creating an invoice
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+{% tabs %}
+{% tab title="Supplier context" %}
+```
+{
+	"Version": 1,
+	"IsDeactivated": false,
+	"FiscalSetupId": 97190,
+	"CreatedAt": "2019-11-26T12:52:50.89Z",
+	"ContextType": "ContextType_Supplier",
+	"PartnerId": 365830428,
+	"TermsOfPayment": {
+		"Offset": 15,
+		"DueType": "xena_running_month",
+		"Description": "Running month + 15 days"
+	},
+	"CurrencyAbbreviation": "DKK",
+	"InvoiceEmail": "",
+	"OfferReportLayoutId": null,
+	"DeliveryReportLayoutId": null,
+	"InvoiceReportLayoutId": null,
+	"ConfirmationReportLayoutId": null,
+	"PriceGroupId": null,
+	"Culture": "da-DK",
+	"DefaultArticleGroupId": null,
+	"DefaultLedgerTagId": null,
+	"DefaultVatId": null,
+	"DefaultLedgerAccount": null,
+	"PaymentMeansType": null,
+	"PaymentMeansTypeTranslated": "",
+	"Account": null,
+	"AccountIdentifier": null,
+	"AccountLabelTranslated": "",
+	"AccountIdentifierLabelTranslated": "",
+	"GroupPayments": false,
+	"DefaultPaymentMessage": null,
+	"PartnerName": null,
+	"DefaultVatAbbreviation": null,
+	"PriceGroupDescription": null,
+	"ArticleGroupDescription": null,
+	"LedgerTagNumber": null,
+	"LedgerTagDescription": null,
+	"OfferReportLayoutName": null,
+	"DeliveryReportLayoutName": null,
+	"InvoiceReportLayoutName": null,
+	"ConfirmationReportLayoutName": null,
+	"CurrencyDescription": "Danish Krone",
+	"ContextDescription": "Supplier",
+	"CultureDisplayName": "Danish (Denmark)",
+	"DefaultBookkeepingText": "",
+	"Id": 520693898
+}
+```
+{% endtab %}
+
+{% tab title="Customer context" %}
+```
+{
+	"Version": 1,
+	"IsDeactivated": false,
+	"FiscalSetupId": 97190,
+	"CreatedAt": "2019-11-26T12:54:12.233Z",
+	"ContextType": "ContextType_Customer",
+	"PartnerId": 516783821,
+	"TermsOfPayment": {
+		"Offset": 8,
+		"DueType": "xena_nett",
+		"Description": "Net + 8 days"
+	},
+	"CurrencyAbbreviation": "DKK",
+	"InvoiceEmail": "",
+	"OfferReportLayoutId": null,
+	"DeliveryReportLayoutId": null,
+	"InvoiceReportLayoutId": null,
+	"ConfirmationReportLayoutId": null,
+	"PriceGroupId": null,
+	"Culture": "da-DK",
+	"DefaultArticleGroupId": null,
+	"DefaultLedgerTagId": null,
+	"DefaultVatId": null,
+	"DefaultLedgerAccount": null,
+	"PaymentMeansType": null,
+	"PaymentMeansTypeTranslated": "",
+	"Account": null,
+	"AccountIdentifier": null,
+	"AccountLabelTranslated": "",
+	"AccountIdentifierLabelTranslated": "",
+	"GroupPayments": false,
+	"DefaultPaymentMessage": null,
+	"PartnerName": null,
+	"DefaultVatAbbreviation": null,
+	"PriceGroupDescription": null,
+	"ArticleGroupDescription": null,
+	"LedgerTagNumber": null,
+	"LedgerTagDescription": null,
+	"OfferReportLayoutName": null,
+	"DeliveryReportLayoutName": null,
+	"InvoiceReportLayoutName": null,
+	"ConfirmationReportLayoutName": null,
+	"CurrencyDescription": "Danish Krone",
+	"ContextDescription": "Customer",
+	"CultureDisplayName": "Danish (Denmark)",
+	"DefaultBookkeepingText": "",
+	"Id": 520619084
+}
+```
+{% endtab %}
+{% endtabs %}
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+
+
+
+
+{% api-method method="post" host="https://my.xena.biz" path="/Api/Fiscal/{fiscal}/Partner/Search" %}
+{% api-method-summary %}
+Create a partner as a customer and/or supplier
+{% endapi-method-summary %}
+
+{% api-method-description %}
+To avoid making two requests to xena when creating a customer or supplier this endpoint can be used.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-body-parameters %}
+{% api-method-parameter name="CustomerTermsOfPaymentOffset" type="integer" required=false %}
+Days or months the customer have to pay the invoice
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="CustomerTermsOfPaymentDueType" type="string" required=false %}
+xena\_cash, xena\_nett, xena\_running\_month or xena\_prepaid
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="SupplierTermsOfPaymentOffset" type="integer" required=false %}
+Days or months on supplier payment terms
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="SupplierTermsOfPaymentDueType" type="string" required=false %}
+xena\_cash, xena\_nett, xena\_running\_month or xena\_prepaid
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="SendInvite" type="boolean" required=false %}
+Leave this as false
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Provider" type="integer" required=false %}
+Leave this as null
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="ProviderId" type="integer" required=false %}
+Leave this as null
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="PartnerType" type="string" required=false %}
+xena\_partnertype\_person if the partner is a private customer.  
+xena\_partnertype\_company if the partner is a company.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Email" type="string" required=false %}
+Customer mail
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Attention" type="string" required=false %}
+Partner att
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="OrgNumber" type="string" required=false %}
+Company registration number \(CVR in DK\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="GLNNumber" type="string" required=false %}
+Number used for electronic invoicing
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Name" type="string" required=false %}
+Partner name
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="PhoneNumber" type="string" required=false %}
+Partner phone number
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Street" type="string" required=false %}
+Street
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="PlaceName" type="string" required=false %}
+Place name
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Zip" type="string" required=false %}
+Postal code
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="City" type="string" required=false %}
+City
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="CountryName" type="string" required=false %}
+ISO countrycode \(DK, NO, SE etc.\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="IsCustomer" type="boolean" required=false %}
+If this is True then a Customer context will be added to the partner
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="IsCupplier" type="boolean" required=false %}
+If this is True then a Supplier context will be added to the partner.
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+Teh fu
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+The full model can be found here:  
+[https://github.com/EG-BRS/Xena.Contracts/blob/development/src/Xena.Contracts/Helpers/PartnerSearchDto.cs](https://github.com/EG-BRS/Xena.Contracts/blob/development/src/Xena.Contracts/Helpers/PartnerSearchDto.cs)
+
 ## How to create an order and add articles
 
 In this section we will show you how to create an order and add an article to that order. This can be done with the following steps:

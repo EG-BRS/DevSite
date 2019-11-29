@@ -601,92 +601,9 @@ error json
 Save the Id - you will need it later.
 {% endhint %}
 
-You can find the full DTO [here](https://github.com/EG-BRS/Xena.Contracts/blob/development/src/Xena.Contracts/Domain/OrderDto.cs)
+You can find the full model [here](https://github.com/EG-BRS/Xena.Contracts/blob/development/src/Xena.Contracts/Domain/OrderDto.cs)
 
 Articles/lines are add not added directly to the order but to an order task. One order can have seval order tasks. The next step is the get the tasks and add articles to them.
-
-{% api-method method="get" host="https://my.xena.biz/Api/Fiscal/{fiscalId}" path="/Order/{orderId}/OrderTask?ForceNoPaging=true&Page=0&PageSize=100&ShowDeactivated=false" %}
-{% api-method-summary %}
-Get order tasks
-{% endapi-method-summary %}
-
-{% api-method-description %}
-First you need to find the order task that you want to add the article to. If CreateTask was true when you created the order then the order will have one. To find the Id of that ordertask you need to get the list of order tasks. You will get a PagedResultSet with a list of this OrderTaskDTO in Entities back.
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="orderId" type="string" required=true %}
-Internal order id
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```
-{
-	"Count": 1,
-	"Entities": [{
-		"Version": 1,
-		"IsDeactivated": false,
-		"FiscalSetupId": 98824,
-		"CreatedAt": "2019-11-25T18:37:10.673Z",
-		"OrderId": 520562489,
-		"OrderContextType": "ContextType_Customer",
-		"PrintDetails": false,
-		"Details": "",
-		"Description": "",
-		"OrderTaskStatusId": 196020703,
-		"Totals": {
-			"PriceNettTotal": 0.0,
-			"CostTotal": 0.0,
-			"DiscountTotalRatio": 0.0,
-			"DiscountTotalPct": 0.0,
-			"DiscountTotal": 0.0,
-			"MarginTotal": 0.0,
-			"MarginTotalRatio": 0.0,
-			"MarginTotalPct": 0.0,
-			"VatEstTotal": 0.0
-		},
-		"Address": {
-			"City": "",
-			"CountryName": "DK",
-			"PlaceName": "",
-			"Street": "",
-			"Zip": "",
-			"Name": "",
-			"Description": " -  ",
-			"CountryDisplayName": "Denmark"
-		},
-		"DeliveryAddress": null,
-		"OrderTaskStatusName": "Igangværende",
-		"OrderTaskStatusColor": "#9cce6f",
-		"OrderNumber": 200015,
-		"Index": 1,
-		"SubscriptionId": null,
-		"IsInvoiced": false,
-		"IsDelivered": false,
-		"IsConfirmed": false,
-		"IsReadonly": false,
-		"Abbreviation": "200015-1",
-		"ProjectId": null,
-		"ProjectClosedDateDays": null,
-		"AppointmentCount": 0,
-		"IsPlanned": false,
-		"Id": 520556331
-	}]
-}
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
 
 {% api-method method="get" host="https://my.xena.biz/Api/Fiscal/{fiscalId}" path="/Order/{orderId}/OrderTask?ForceNoPaging=true&Page=0&PageSize=100&ShowDeactivated=false" %}
 {% api-method-summary %}
@@ -700,7 +617,23 @@ First you need to find the ordertask that you want to add the article to. If Cre
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="orderId" type="string" required=false %}
+{% api-method-parameter name="ShowDeactivated" type="boolean" required=false %}
+Leave this as false
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Page" type="integer" required=false %}
+Page number
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="ForceNoPaging" type="boolean" required=false %}
+If you set this as True then you will deactivate pageing
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="PageSize" type="integer" required=false %}
+Page size
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="orderId" type="string" required=true %}
 Internal order id
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -771,9 +704,9 @@ Internal order id
 {% endapi-method-spec %}
 {% endapi-method %}
 
-test
 
-{% api-method method="get" host="https://my.xena.biz/Api/Fiscal/{fiscalId}" path="/OrderTask" %}
+
+{% api-method method="post" host="https://my.xena.biz/Api/Fiscal/{fiscalId}" path="/OrderTask" %}
 {% api-method-summary %}
 Find an order task
 {% endapi-method-summary %}
@@ -882,86 +815,6 @@ You should save the data since you will need it when updating the line with the 
 	"AppointmentCount": 0,
 	"IsPlanned": false,
 	"Id": 520556332
-}
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
-{% api-method method="post" host="https://my.xena.biz/Api/Fiscal/{fiscalId}" path="/OrderLine" %}
-{% api-method-summary %}
-Create an order task line
-{% endapi-method-summary %}
-
-{% api-method-description %}
-Now you are ready to add an article to the order task. To do this, you will need the id of the article and to create an ordertaskline. Here I assume you got an article id. Start by creating a new order task line.
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-body-parameters %}
-{% api-method-parameter name="OrderId" type="string" required=false %}
-
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-You should save the data since you will need it when updating the line with the article id.
-{% endapi-method-response-example-description %}
-
-```text
-{
-    "Version": 1,
-    "IsDeactivated": false,
-    "FiscalSetupId": 98824,
-    "CreatedAt": "2019-11-25T19:05:54.163Z",
-    "OrderId": 520562489,
-    "OrderContextType": "ContextType_Customer",
-    "PrintDetails": false,
-    "Details": "",
-    "Description": "",
-    "OrderTaskStatusId": 196020703,
-    "Totals": {
-        "PriceNettTotal": 0.0,
-        "CostTotal": 0.0,
-        "DiscountTotalRatio": 0.0,
-        "DiscountTotalPct": 0.0,
-        "DiscountTotal": 0.0,
-        "MarginTotal": 0.0,
-        "MarginTotalRatio": 0.0,
-        "MarginTotalPct": 0.0,
-        "VatEstTotal": 0.0
-    },
-    "Address": {
-        "City": "",
-        "CountryName": "DK",
-        "PlaceName": "",
-        "Street": "",
-        "Zip": "",
-        "Name": "",
-        "Description": " -  ",
-        "CountryDisplayName": "Denmark"
-    },
-    "DeliveryAddress": null,
-    "OrderTaskStatusName": "Igangværende",
-    "OrderTaskStatusColor": "#9cce6f",
-    "OrderNumber": 200015,
-    "Index": 2,
-    "SubscriptionId": null,
-    "IsInvoiced": false,
-    "IsDelivered": false,
-    "IsConfirmed": false,
-    "IsReadonly": false,
-    "Abbreviation": "200015-2",
-    "ProjectId": null,
-    "ProjectClosedDateDays": null,
-    "AppointmentCount": 0,
-    "IsPlanned": false,
-    "Id": 520556332
 }
 ```
 {% endapi-method-response-example %}
@@ -1149,102 +1002,7 @@ Id of the line order you want to update
 {% endapi-method-spec %}
 {% endapi-method %}
 
-1. Add a article to the order
 
-   First you need to find the ordertask that you want to add the article to. If CreateTask was true when you created the order. Then you need to find the Id of that ordertask else you need to create a new one.
-
-Get the list of order tasks on an order: GET [https://my.xena.biz/Api/Fiscal/{fiscalId}/Order/{orderId}/OrderTask?ForceNoPaging=true&Page=0&PageSize=100&ShowDeactivated=false](https://my.xena.biz/Api/Fiscal/{fiscalId}/Order/{orderId}/OrderTask?ForceNoPaging=true&Page=0&PageSize=100&ShowDeactivated=false) You will get a [PagedResultSet](https://github.com/EG-BRS/Xena.Contracts/blob/development/src/Xena.Contracts/Helpers/PagedResultSet.cs) with a list of [this model](https://github.com/EG-BRS/Xena.Contracts/blob/development/src/Xena.Contracts/Domain/OrderTaskDto.cs) in Entities back.
-
-Create a new orderTask: POST [https://my.xena.biz/Api/Fiscal/98824/OrderTask](https://my.xena.biz/Api/Fiscal/98824/OrderTask)
-
-```javascript
-{
-  "OrderId": {your order id}
-}
-```
-
-Xena will return this model to you: [https://github.com/EG-BRS/Xena.Contracts/blob/development/src/Xena.Contracts/Domain/OrderLineDto.cs](https://github.com/EG-BRS/Xena.Contracts/blob/development/src/Xena.Contracts/Domain/OrderLineDto.cs)
-
-You should save the Id.
-
-Now you are ready to add an article to the ordertask. In order to do this you will need the id of the article and to create an ordertaskline. Here I assume you got an article id.
-
-POST [https://my.xena.biz/Api/Fiscal/98824/OrderLine](https://my.xena.biz/Api/Fiscal/98824/OrderLine)
-
-```javascript
-{
-  "OrderTaskId": {your order task id here}
-}
-```
-
-This will return [this](https://github.com/EG-BRS/Xena.Contracts/blob/development/src/Xena.Contracts/Domain/OrderLineDto.cs) model. You should save the data since you will need it when updating the line with the article id.
-
-To update the line make the following request: PUT [https://my.xena.biz/Api/Fiscal/{fiscalId}/OrderLine/{orderlineId}](https://my.xena.biz/Api/Fiscal/{fiscalId}/OrderLine/{orderlineId})
-
-```javascript
-{
-  {
-    "OrderTaskId": 518296597,
-    "Version": 1,
-    "IsDeactivated": false,
-    "FiscalSetupId": 98824,
-    "LocationId": null,
-    "OrderInvoiceTaskId": null,
-    "OrderId": 518303757,
-    "ProjectId": null,
-    "Index": 1,
-    "ArticleId": 195803359,
-    "InvoiceDateDays": null,
-    "CostEach": 0,
-    "Description": "",
-    "PriceEach": 0,
-    "Quantity": 0,
-    "UnitId": null,
-    "PayerId": null,
-    "PayerAccountNumber": null,
-    "UnitAbbreviation": null,
-    "ArticleNumber": null,
-    "Totals": {
-        "PriceNettTotal": 0,
-        "CostTotal": 0,
-        "DiscountTotalRatio": 0,
-        "DiscountTotalPct": 0,
-        "DiscountTotal": 0,
-        "MarginTotal": 0,
-        "MarginTotalRatio": 0,
-        "MarginTotalPct": 0,
-        "VatEstTotal": 0
-    },
-    "ArticleGroupId": null,
-    "ArticleVariantId": null,
-    "ArticleGroupDescription": null,
-    "ArticleHasInventoryManagement": false,
-    "ArticleHasVariants": false,
-    "ArticleInternalNote": null,
-    "ArticleIsBundle": false,
-    "ArticleVariantAbbreviation": null,
-    "ArticleWeight": null,
-    "LocationAbbreviation": null,
-    "ArticleStatus": null,
-    "OrderDeliveryTransactionId": null,
-    "ArticleMappingId": null,
-    "ArticleMappingQuantity": null,
-    "PartnerArticleNumber": null,
-    "IsConfirmed": false,
-    "ArticleAbbreviation": "yde1",
-    "IsDelivered": false,
-    "ArticleIsDeactivated": false,
-    "AverageCostPrice": null,
-    "EstimatedCostTotal": 0,
-    "OrderLineStatusColor": null,
-    "OrderLineStatusName": null,
-    "HasLinkedLines": false,
-    "Id": 518397661
-}
-}
-```
-
-The important field are ArticleId, Quantity, Description and .See the full model [here.](https://github.com/EG-BRS/Xena.Contracts/blob/development/src/Xena.Contracts/Domain/OrderLineDto.cs)
 
 ## How to create an invoice
 

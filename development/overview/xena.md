@@ -1,3 +1,7 @@
+---
+description: 'A walk-through of the most common actions in Xena, done via our API.'
+---
+
 # Xena
 
 {% hint style="info" %}
@@ -6,7 +10,7 @@ For a complete overview of the Xena API, please go to [https://xena.biz/api-doc/
 
 ## How the create a partner
 
-A partner in Xena can be used as a creditor, debtor and/or employee. The idea behind this is to avoid duplicate data and to give our customers a better overview of all of their business with a specific partner. If a partner is a creditor then the partner will have a customer context connected. If a partner is a debtor then the partner will have a supplier context connected. A partner can have more than one context. When you make a lookup on a specific partner. Then you will get info about the contexts associated.
+A partner in Xena can be used as a creditor, debtor and/or employee. The idea behind this is to avoid duplicate data and to give our customers a better overview of all of their business with a specific partner. If a partner is a creditor, it will have a _customer context_ connected. If a partner is a debtor, it will have a _supplier context_ connected. A partner can have more than one context. When you make a lookup on a specific partner, you will get info about the contexts associated.
 
 ```javascript
 GET https://my.xena.biz/Api/Fiscal/{fiscalId}/Partner/{partnerId}
@@ -19,7 +23,7 @@ GET https://my.xena.biz/Api/Fiscal/{fiscalId}/Partner/{partnerId}
 }
 ```
 
-This is important to understand when you are creating a new partner. If you use the default endpoint then the partner will be created without any contexts.
+This is important to understand when you create a new partner. If you use the default endpoint, the partner will be created without any contexts.
 
 {% hint style="info" %}
 There are two ways to creating a partner. The first method requires two API calls. The second method can only create a customer or supplier but only requires one API call.
@@ -142,7 +146,7 @@ Id of the fiscal you want to create the partner in
 {% endapi-method-spec %}
 {% endapi-method %}
 
-This will create a new partner in Xena. In Xena the partner can be converted to a customer, supplier oo/and employee. If you want to add a context you can use the following endpoint.
+This will create a new partner in Xena. In Xena, the partner can be converted to a customer, supplier or/and employee. If you want to add a context you can use the following endpoint.
 
 {% api-method method="post" host="https://my.xena.biz" path="/Api/Fiscal/{fiscalId}/PartnerContext" %}
 {% api-method-summary %}
@@ -288,17 +292,13 @@ The email that will be suggested when creating an invoice
 {% endapi-method-spec %}
 {% endapi-method %}
 
-
-
-
-
 {% api-method method="post" host="https://my.xena.biz" path="/Api/Fiscal/{fiscal}/Partner/Search" %}
 {% api-method-summary %}
 Create a partner as a customer and/or supplier
 {% endapi-method-summary %}
 
 {% api-method-description %}
-To avoid making two requests to xena when creating a customer or supplier this endpoint can be used.
+To avoid making two requests when creating a customer or supplier, this endpoint can be used.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -413,11 +413,11 @@ The full model can be found here:
 In this section we will show you how to create an order and add an article to that order. This can be done with the following steps:
 
 1. Create the order
-2. Finde the ordetask or add an ordertask
-3. Add a line to the order
-4. Update the orderline the the article
+2. Find the order task or add an order task
+3. Add a line to the order task
+4. Update the order line with an article
 
-In the following sections we will describe the needed endpoints
+In the following sections we will describe the needed endpoints.
 
 {% api-method method="post" host="https://my.xena.biz/Api/Fiscal/{fiscalId}" path="/Order" %}
 {% api-method-summary %}
@@ -603,7 +603,7 @@ Save the Id - you will need it later.
 
 You can find the full model [here](https://github.com/EG-BRS/Xena.Contracts/blob/development/src/Xena.Contracts/Domain/OrderDto.cs)
 
-Articles/lines are add not added directly to the order but to an order task. One order can have seval order tasks. The next step is the get the tasks and add articles to them.
+Articles/lines are not added directly to the order but to an _order task_. One order can have several order tasks. The next step is to get the tasks and add articles to them.
 
 {% api-method method="get" host="https://my.xena.biz/Api/Fiscal/{fiscalId}" path="/Order/{orderId}/OrderTask?ForceNoPaging=true&Page=0&PageSize=100&ShowDeactivated=false" %}
 {% api-method-summary %}
@@ -611,7 +611,7 @@ Get order tasks
 {% endapi-method-summary %}
 
 {% api-method-description %}
-First you need to find the ordertask that you want to add the article to. If CreateTask was true when you created the order then the order will have one. To find the Id of that ordertask you need to get the list of order tasks. You will get a PagedResultSet with a list of OrderTaskDTO in Entities property from the endpoint.
+First you need to find the order task that you want to add the article to. If `CreateTask` was `true` when you created the order then the order will have one task already. To find the Id of that order task you need to get the list of order tasks. You will get a `PagedResultSet` with a list of `OrderTaskDTO` in Entities property from the endpoint.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -704,15 +704,13 @@ Internal order id
 {% endapi-method-spec %}
 {% endapi-method %}
 
-
-
 {% api-method method="post" host="https://my.xena.biz/Api/Fiscal/{fiscalId}" path="/OrderTask" %}
 {% api-method-summary %}
 Find an order task
 {% endapi-method-summary %}
 
 {% api-method-description %}
-If there are no ordertasks on the order or you want to create a new one. Then you can use this endpoint.
+If there are no ordertasks on the order or you want to create a new one, you can use this endpoint.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -748,7 +746,7 @@ Create an order task line
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Now you are ready to add an article to the order task. To do this, you will need the id of the article and to create an ordertaskline. Here I assume you got an article id. Start by creating a new order task line.
+Now you are ready to add an article to the order task. To do this, you will need the id of the article and to create an _order line_. Here, we assume you got an article id. Start by creating a new order task line.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -828,7 +826,7 @@ Update an order task line
 {% endapi-method-summary %}
 
 {% api-method-description %}
-To update the line make the this request. The important field are `ArticleId`, `Quantity` and `Description`. See the full model here.
+To update the line, make the this request. The important fields are `ArticleId`, `Quantity` and `Description`.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -912,97 +910,7 @@ Id of the line order you want to update
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="https://my.xena.biz/Api/Fiscal/{fiscalId}" path="/OrderLine/{orderlineId}" %}
-{% api-method-summary %}
-Update a task line
-{% endapi-method-summary %}
-
-{% api-method-description %}
-To update the line make the this request. The important field are `ArticleId`, `Quantity` and `Description`. See the full model here.
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="orderlineId" type="integer" required=false %}
-Id of the line order you want to update
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```text
-{
-    "Version": 2,
-    "IsDeactivated": false,
-    "FiscalSetupId": 98824,
-    "CreatedAt": "2019-11-25T19:18:42.527Z",
-    "LocationId": null,
-    "OrderInvoiceTaskId": null,
-    "OrderTaskId": 520556332,
-    "OrderId": 520562489,
-    "ProjectId": null,
-    "Index": 0,
-    "ArticleId": 195803359,
-    "InvoiceDateDays": null,
-    "CostEach": 0.00000,
-    "Description": "Ydelser sats 1",
-    "PriceEach": 0.00000,
-    "Quantity": 1.00000,
-    "UnitId": 195796629,
-    "PayerId": null,
-    "PayerAccountNumber": null,
-    "UnitAbbreviation": "timer",
-    "ArticleNumber": "yde1",
-    "Totals": {
-        "PriceNettTotal": 0.00000,
-        "CostTotal": 0.00000,
-        "DiscountTotalRatio": 0.0,
-        "DiscountTotalPct": 0.0,
-        "DiscountTotal": 0.00000,
-        "MarginTotal": 0.00000,
-        "MarginTotalRatio": 0.0,
-        "MarginTotalPct": 0.0,
-        "VatEstTotal": 0.00000
-    },
-    "ArticleGroupId": 195796691,
-    "ArticleVariantId": null,
-    "ArticleGroupDescription": "Ydelser",
-    "ArticleHasInventoryManagement": false,
-    "ArticleHasVariants": false,
-    "ArticleInternalNote": null,
-    "ArticleIsBundle": false,
-    "ArticleVariantAbbreviation": null,
-    "ArticleWeight": null,
-    "LocationAbbreviation": null,
-    "ArticleStatus": null,
-    "OrderDeliveryTransactionId": null,
-    "ArticleMappingId": null,
-    "ArticleMappingQuantity": null,
-    "PartnerArticleNumber": null,
-    "IsConfirmed": false,
-    "ArticleAbbreviation": "yde1",
-    "IsDelivered": false,
-    "ArticleIsDeactivated": false,
-    "AverageCostPrice": null,
-    "EstimatedCostTotal": 0.00000,
-    "OrderLineStatusColor": null,
-    "OrderLineStatusName": null,
-    "HasLinkedLines": false,
-    "Id": 520557490
-}
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
-
-
 ## How to create an invoice
+
+\[Coming up\]
 

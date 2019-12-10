@@ -48,7 +48,7 @@ Syntax: `Xena.openConfirm(callback: (result: boolean) => any, message: string = 
 **Example**
 ```
 Xena.openConfirm(function(result) {
-	console.log('User confirmed', result);
+  console.log('User confirmed', result);
 }, 'Can you confirm this? :-)', 'Please confirm');
 ```
 ![enter image description here](https://i.imgur.com/fUl3IGG.png)
@@ -66,7 +66,7 @@ Syntax: `Xena.closePopup(result: any = null)`
 Plugin page
 ```
 Xena.openPopup(function(result) {
-	console.log('Result:', result);
+  console.log('Result:', result);
 }, '{link-to-your-iframe}', 'Plugin Iframe in Modal');
 ```
 Plugin iFrame page

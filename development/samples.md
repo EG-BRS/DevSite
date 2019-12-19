@@ -8,6 +8,7 @@ We have prepered a few samples:
 
 * [Hybrid flow in ASP.NET core app](https://github.com/EG-BRS/Identity.Server.Sample.Dotnet/tree/master/HybridMVC.Core)
 * [Hybrid flow in ASP.NET classic app](https://github.com/EG-BRS/Identity.Server.Sample.Dotnet/tree/master/HybricMVC.NetFramework)
+* [Hybrid flow in PHP app](https://github.com/EG-BRS/Xena.ExampleApp.PHP)
 * [Implicit flow in ASP.NET core app](https://github.com/EG-BRS/Identity.Server.Sample.Dotnet/tree/master/ImplicitMVC.Core)
 * [Implicit flow in javascript app](https://github.com/EG-BRS/Identity.Server.Sample.Dotnet/tree/master/ImplicitJavascript)
 

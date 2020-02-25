@@ -14,6 +14,6 @@ After you login, enter the Company tab -> API-keys
 
 ## API call
 
-To call the Xena you need a header called XenaApiKey: [KEY] and thats it.
+To call the Xena API you need a header called `XenaApiKey: [KEY]` and that's it.
 
 ![Insomnia GET request with API Key.](../../.gitbook/assets/xenaApiKeyInsomniaGetExample.PNG)

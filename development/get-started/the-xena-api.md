@@ -18,7 +18,7 @@ If the answer to the above question is “yes”, then OAuth is that way to go. 
 
 The choice can also be based on the pros and cons of each of the methods:
 
-OAuth:
+[OAuth:](using-oauth.md)
 
 | Pros | Cons |
 | :--- | :--- |
@@ -28,7 +28,7 @@ OAuth:
 | Role based security, your app will have the same role as the user using the app. |  |
 | License free \(No additional cost in Xena\) |  |
 
-API keys:
+[API keys:](using-xenaAPIkey.md)
 
 | Pros | Cons |
 | :--- | :--- |

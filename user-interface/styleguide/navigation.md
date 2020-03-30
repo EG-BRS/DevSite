@@ -4,7 +4,7 @@ description: There are different options for navigating in views.
 
 # Navigation
 
-The primary navigation is, of cause, the main menu with its second level navigation \(1\). Another common navigation is lists in views \(2\) and tabs in top of panels \(3\). If beneficial for the end user, you can also have navigation inside a panel \(4\).
+The primary navigation is, of cause, the main menu with its second level navigation \(1\). Another common navigation is lists in views \(3\) and tabs in top of panels \(2\). If beneficial for the end user, you can also have navigation inside a panel \(4\).
 
 ![Illustration of the four different navigation areas.](../../.gitbook/assets/navigationareas.png)
 

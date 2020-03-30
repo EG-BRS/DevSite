@@ -28,7 +28,7 @@ The choice can also be based on the pros and cons of each of the methods:
 | Role based security, your app will have the same role as the user using the app. |  |
 | License free \(No additional cost in Xena\) |  |
 
-[API keys:](using-xenaAPIkey.md)
+[API keys:](using-xenaapikey.md)
 
 | Pros | Cons |
 | :--- | :--- |

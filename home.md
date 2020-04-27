@@ -13,15 +13,13 @@ Xena has multiple ways to interact with external systems:
 * Build [custom plugin](development/get-started/createplugin.md) applications - UI integration
 * Integrate your Xena data with other business applications with [Direct API calls](development/get-started/the-xena-api.md) – request based
 * [Webhook callbacks](development/get-started/using-webhooks.md) - event based integration
-* Save meta data on objects in Xena (e.g. an order or a partner)
+* Save meta data on objects in Xena \(e.g. an order or a partner\)
 
 {% hint style="info" %}
 For a complete overview of the Xena API, please go to [https://xena.biz/api-doc/](https://xena.biz/api-doc/)
 {% endhint %}
 
-{% embed url="https://www.youtube.com/watch?v=JEEfYtWV3X4" %}
-
-
+{% embed url="https://www.youtube.com/watch?v=JEEfYtWV3X4" caption="" %}
 
 ### Feedback and support
 

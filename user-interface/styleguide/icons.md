@@ -5,7 +5,7 @@ description: We use the solid style of Font Awesome 5 icons.
 # Icons
 
 {% hint style="warning" %}
-Icons are no longer part of our CSS for third parties. 
+Icons are not included in our CSS for third parties. 
 {% endhint %}
 
 We encoracge you to use the same set of icons as us. Most apps will be satisfied with the free version of Font Awesome 5. For a complete overview, please refer to [https://fontawesome.com/icons?d=gallery&s=solid&m=free](https://fontawesome.com/icons?d=gallery&s=solid&m=free)

@@ -103,7 +103,7 @@ vCards is a digital contact card. Visually we try to illustrate that.
 </div>
 ```
 
-## Files overview, file slider
+## Files overview, file slider \(deprecated\)
 
 Used in list of vouchers and files with preview. The list scrolls horizontally. The following demo shows a container used for “dropzone”, a preview loading and a regular file preview.
 

@@ -121,27 +121,48 @@ Each row can have a context menu.
 
 ## Editible data
 
-Edit data in table.
+Edit data in table. For these text input fields to look right inside tables, you must apply some classes on the row and individual cells.
 
 ![Table row with editable data.](../../.gitbook/assets/table_edit.PNG)
 
 ```markup
 <div class="table-responsive">
     <table class="table">
-            <tbody>
-                <tr class="table-edit-mode">
-                    <td class="cell-edit-mode">
-                        <div class="form-group">
-                            <input type="text" value="Cell 1" class="form-control">
-                        </div>
-                    </td>
-                    <td class="cell-edit-mode">
-                        <div class="form-group">
-                            <input type="text" value="Cell 2" class="form-control">
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
+        <tbody>
+            <tr class="table-edit-mode">
+                <td class="cell-edit-mode">
+                    <div class="form-group">
+                        <input type="text" value="Cell 1" class="form-control">
+                    </div>
+                </td>
+                <td class="cell-edit-mode">
+                    <div class="form-group">
+                        <input type="text" value="Cell 2" class="form-control">
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+```
+
+In case of checkboxes or radio buttons in tables, you do not need to apply cell-edit-mode.
+
+```markup
+<div class="table-responsive">
+    <table class="table">
+        <tbody>
+            <tr class="table-edit-mode">
+                <td>
+                    <input type="checkbox">
+                </td>
+                <td class="cell-edit-mode">
+                    <div class="form-group">
+                        <input type="text" value="Cell 2" class="form-control">
+                    </div>
+                </td>
+            </tr>
+        </tbody>
     </table>
 </div>
 ```

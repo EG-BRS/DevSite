@@ -13,17 +13,18 @@ Xena use default system fonts as to speed up loading. The UI will feel familiar 
 Please refer to our [UX guidelines](../../the-possibilities/user-experience.md) on how to use colors.
 
 {% hint style="info" %}
-Late April 2020, our brand and theme colors was updated.
+May 2020, our brand and theme colors was updated.
 {% endhint %}
 
 ### System colors
 
 | Use | Color |
 | :--- | :--- |
-| Success | \#9DAB34 |
-| Info | \#5BC0DE |
-| Warning | \#E6BE1D |
-| Danger | \#F74C3F |
+| Primary | \#007BFF |
+| Success | \#28A745 |
+| Info | \#17A2B8 |
+| Warning | \#FFC107 |
+| Danger | \#DC3545 |
 | Borders | \#DEE2E6 |
 | Font color | \#212529 |
 | Body background | \#F0F2F5 |

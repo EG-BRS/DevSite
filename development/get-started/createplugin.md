@@ -2,16 +2,70 @@
 description: Basics on creating plugins for Xena.
 ---
 
-# Creating plugins
+# Create plugins for your app
 
-Xena gives app developers easy access to adding elements to the Xena UI via plugins. These plugins can be of different types, e.g. a widget, tab, button, menu etc. A plugin consist of four things:
+If you don't have registered an app in Xena see [Register your app](createapplication.md) for instructions.
 
-* **Title** This is the title of the plugin. This title is used as a title on widgets, tabs, buttons, menus etc.
-* **Type** The type of a plugin describes which type of view the plugin is related to, f.eks. “ArticleDetails”, “OrderList” etc.
-* **Placement** The placement of the plugin depends of the Type above. Some types have different placement options than others, eg. some types have “Widget”, “DetailsTab”, “StatisticTab” etc.
-* **External URL** 
+After you have successfully registered you app in Xena go to APPS &gt; DEVELOPER find you app and open it.
+From here you can change the settings arround your app. Click click on the Plugin-tab on the right side of the window.
+Now you see the list of plugins you have added to your app, from here you can also create new plugins.
 
-   If the placement requires content\(eg. widgets and tabs\) then the content is fetched from this URL. If the placement is an action\(eg. buttons, menues etc\) this URL is called when the user interacts with the plugin. Each plugin has a list of possible parameters, f.eks. the ID of the user whom acts with the plugin. Note the this URL is required to be via HTTPS.
+## What is a plugin?
+An app in Xena consists of plugins. A plugin can be a main menu item, main menu group, tab or a widget.
+We show plugins inside iFrames in Xena. We call these places "plugin placements" which you can select when creating your plugin.
+
+## Fields for a plugin
+Which fields that are required depends on the setting type and context menu in the creation form.
+
+### Title
+Title for the plugin. This title is used as a title on widgets, tabs, buttons, menus etc.
+
+### Index
+Index for the plugin. This field is used to order the menu items or tabs.
+
+### Icon CSS class
+Used for menu items. Specify a CSS class for an FontAwesome5 icon
+Specify both the type class and icon class. For the solid wrench icon that would be `fas fa-wrench`
+
+### Type
+The type of a plugin describes which type of view the plugin is related to. See it as a form of *main placement*
+*Main menu item* for plugin in main menu. *Partner overview* for a tab or widget inside Partner overview
+
+### Menu group
+Grouping of menu items or placement at root level. Most oftent placement at root level would be available here.
+
+### Context menu
+Where to place plugin under *Type* (main placement)
+For menu items this would be other main menu items that you plugin could be placed under.
+
+### External URI
+Specify the location of the plugin. *HTTPS is required*. Placeholders for Xena data is available
+| Placeholder | Value |
+| :--- | :--- |
+| {fid} | Current FiscalSetupId |
+| {eid} | Current EntityId |
+| {rid} | Current ResourceId |
+| {uid} | Current UserId |
+| {lcid} | Current culture |
+
+A live example of the URI will be shown while typing.
+
+### Security (available after May 29th 2020)
+The plugin is visible for the user using an iFrame. As per default scripts are allowed in our iframes.
+| Xena Default | Attribute | Description |
+| :--- | :--- | :--- |
+| [x] | allow-same-origin | (Xena default for our own plugins) |
+| [x] | allow-scripts | Allow plugin to run javascript in sandbox. Set by default for our provided plugin.js |
+| [ ] | allow-forms | Allows form submission from plugin |
+| [ ] | allow-popups | Allows popups inside sandbox (ie. new windows) |
+| [ ] | allow-popups-to-escape-sandbox | Allow popups from plugin to escape sandbox |
+| [ ] | allow-modals | Allow to open modal windows from plugin |
+| [ ] | allow-downloads | Allow plugin to initiate downloads |
+
+Xena Defaults can't be changed!
+
+If your app initiates downloads from a plugin then go to that specific plugin and check the security setting regarding download.
+Be aware that allowing these sandbox attributes your app can become insecure! Add only the attributes that is absolutely needed for your plugin.
 
 ## Styling the plugins
 

@@ -6,8 +6,8 @@ description: Basics on creating plugins for Xena.
 
 If you don't have registered an app in Xena see [Register your app](createapplication.md) for instructions.
 
-After you have successfully registered you app in Xena go to APPS &gt; DEVELOPER find you app and open it.
-From here you can change the settings arround your app. Click click on the Plugin-tab on the right side of the window.
+After you have successfully registered your app in Xena go to APPS &gt; DEVELOPER find you app and open it.
+From here you can change the settings around your app. Click on the Plugin-tab on the right side of the window.
 Now you see the list of plugins you have added to your app, from here you can also create new plugins.
 
 ## What is a plugin?
@@ -32,11 +32,11 @@ The type of a plugin describes which type of view the plugin is related to. See 
 *Main menu item* for plugin in main menu. *Partner overview* for a tab or widget inside Partner overview
 
 ### Menu group
-Grouping of menu items or placement at root level. Most oftent placement at root level would be available here.
+Grouping of menu items or placement at root level. Most often placement at root level would be available here.
 
 ### Context menu
 Where to place plugin under *Type* (main placement)
-For menu items this would be other main menu items that you plugin could be placed under.
+For menu items this would be other main menu items that your plugin could be placed under.
 
 ### External URI
 Specify the location of the plugin. *HTTPS is required*. Placeholders for Xena data is available

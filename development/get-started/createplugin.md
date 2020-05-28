@@ -2,44 +2,48 @@
 description: Basics on creating plugins for Xena.
 ---
 
-# Create plugins for your app
+# Creating plugins
 
 If you don't have registered an app in Xena see [Register your app](createapplication.md) for instructions.
 
-After you have successfully registered your app in Xena go to APPS &gt; DEVELOPER find you app and open it.
-From here you can change the settings around your app. Click on the Plugin-tab on the right side of the window.
-Now you see the list of plugins you have added to your app, from here you can also create new plugins.
+After you have successfully registered your app in Xena go to APPS &gt; DEVELOPER find you app and open it. From here you can change the settings around your app. Click on the Plugin-tab on the right side of the window. Now you see the list of plugins you have added to your app, from here you can also create new plugins.
 
 ## What is a plugin?
-An app in Xena consists of plugins. A plugin can be a main menu item, main menu group, tab or a widget.
-We show plugins inside iFrames in Xena. We call these places "plugin placements" which you can select when creating your plugin.
+
+An app in Xena consists of plugins. A plugin can be a main menu item, main menu group, tab or a widget. We show plugins inside iFrames in Xena. We call these places "plugin placements" which you can select when creating your plugin.
 
 ## Fields for a plugin
+
 Which fields that are required depends on the setting type and context menu in the creation form.
 
 ### Title
+
 Title for the plugin. This title is used as a title on widgets, tabs, buttons, menus etc.
 
 ### Index
+
 Index for the plugin. This field is used to order the menu items or tabs.
 
 ### Icon CSS class
-Used for menu items. Specify a CSS class for an FontAwesome5 icon
-Specify both the type class and icon class. For the solid wrench icon that would be `fas fa-wrench`
+
+Used for menu items. Specify a CSS class for an FontAwesome5 icon Specify both the type class and icon class. For the solid wrench icon that would be `fas fa-wrench`
 
 ### Type
-The type of a plugin describes which type of view the plugin is related to. See it as a form of *main placement*
-*Main menu item* for plugin in main menu. *Partner overview* for a tab or widget inside Partner overview
+
+The type of a plugin describes which type of view the plugin is related to. See it as a form of _main placement_ _Main menu item_ for plugin in main menu. _Partner overview_ for a tab or widget inside Partner overview
 
 ### Menu group
+
 Grouping of menu items or placement at root level. Most often placement at root level would be available here.
 
 ### Context menu
-Where to place plugin under *Type* (main placement)
-For menu items this would be other main menu items that your plugin could be placed under.
+
+Where to place plugin under _Type_ \(main placement\) For menu items this would be other main menu items that your plugin could be placed under.
 
 ### External URI
-Specify the location of the plugin. *HTTPS is required*. Placeholders for Xena data is available
+
+Specify the location of the plugin. _HTTPS is required_. Placeholders for Xena data is available
+
 | Placeholder | Value |
 | :--- | :--- |
 | {fid} | Current FiscalSetupId |
@@ -50,22 +54,23 @@ Specify the location of the plugin. *HTTPS is required*. Placeholders for Xena d
 
 A live example of the URI will be shown while typing.
 
-### Security (available after May 29th 2020)
+### Security \(available after May 29th 2020\)
+
 The plugin is visible for the user using an iFrame. As per default scripts are allowed in our iframes.
+
 | Xena Default | Attribute | Description |
 | :--- | :--- | :--- |
-| [x] | allow-same-origin | (Xena default for our own plugins) |
-| [x] | allow-scripts | Allow plugin to run javascript in sandbox. Set by default for our provided plugin.js |
-| [ ] | allow-forms | Allows form submission from plugin |
-| [ ] | allow-popups | Allows popups inside sandbox (ie. new windows) |
-| [ ] | allow-popups-to-escape-sandbox | Allow popups from plugin to escape sandbox |
-| [ ] | allow-modals | Allow to open modal windows from plugin |
-| [ ] | allow-downloads | Allow plugin to initiate downloads |
+| \[x\] | allow-same-origin | \(Xena default for our own plugins\) |
+| \[x\] | allow-scripts | Allow plugin to run javascript in sandbox. Set by default for our provided plugin.js |
+| \[ \] | allow-forms | Allows form submission from plugin |
+| \[ \] | allow-popups | Allows popups inside sandbox \(ie. new windows\) |
+| \[ \] | allow-popups-to-escape-sandbox | Allow popups from plugin to escape sandbox |
+| \[ \] | allow-modals | Allow to open modal windows from plugin |
+| \[ \] | allow-downloads | Allow plugin to initiate downloads |
 
 Xena Defaults can't be changed!
 
-If your app initiates downloads from a plugin then go to that specific plugin and check the security setting regarding download.
-Be aware that allowing these sandbox attributes your app can become insecure! Add only the attributes that is absolutely needed for your plugin.
+If your app initiates downloads from a plugin then go to that specific plugin and check the security setting regarding download. Be aware that allowing these sandbox attributes your app can become insecure! Add only the attributes that is absolutely needed for your plugin.
 
 ## Styling the plugins
 

@@ -752,7 +752,7 @@ Now you are ready to add an article to the order task. To do this, you will need
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-body-parameters %}
-{% api-method-parameter name="OrderId" type="string" required=false %}
+{% api-method-parameter name="OrderTaskId" type="string" required=false %}
 
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}

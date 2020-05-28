@@ -32,6 +32,7 @@
   * [Alerts and warnings](user-interface/styleguide/alertsandwarnings.md)
   * [Buttons](user-interface/styleguide/buttons.md)
   * [Colors and fonts](user-interface/styleguide/fontandcolors.md)
+  * [Collapsible](user-interface/styleguide/collapsible.md)
   * [Dropdowns](user-interface/styleguide/dropdowns.md)
   * [Forms](user-interface/styleguide/forms.md)
   * [Icons](user-interface/styleguide/icons.md)

@@ -6,9 +6,14 @@ description: How to build responsive layouts.
 
 Xena's responsive layout is _based_ on Bootstrap. If the browser supports CSS grid we will use that instead of Bootstraps grid system. You build your layout in rows and columns. Think “mobile first” when putting in your classes – always start with `col-xs-12`.
 
+{% hint style="info" %}
+If you do not need responsive columns \(e.g. only one column is needed\), then don't use the `row` and `col-` divs. Just insert your `section` and you are good to go.
+{% endhint %}
+
 ![Two panels, full width.](../../.gitbook/assets/layout-standard.PNG)
 
 ```markup
+
 <div class="row">
     <div class="col-xs-12">
         <section class="panel panel-default">

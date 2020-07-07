@@ -9,7 +9,7 @@ We operate with four types of information: Info, Warning, Danger and Success. He
 ![Alert message](../../.gitbook/assets/alerts.PNG)
 
 ```markup
-div class="alert alert-info">
+<div class="alert alert-info">
     <button type="button" class="close"><i class="icon-close"></i></button>
     <p>Alert message <a href="#" class="alert-link">with link</a>.</p>
 </div>

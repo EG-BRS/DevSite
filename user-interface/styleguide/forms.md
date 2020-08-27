@@ -33,7 +33,7 @@ Form input with an **illustrative icon**.
         <div class="col-xs-12 col-sm-8">
             <div class="input-icon-group">
                 <input type="text" class="form-control" id="input2">
-                <span class="input-icon"><i class="icon-search"></i></span>
+                <span class="input-icon"><i class="fas fa-search"></i></span>
             </div>
         </div>
     </div>
@@ -51,8 +51,8 @@ Form input with an illustrative icon and **link add-on**.
         <div class="col-xs-12 col-sm-8">
             <div class="input-group">
                 <input type="text" class="form-control" id="input3">
-                <span class="input-icon"><i class="icon-search"></i></span>
-                <a href="#" class="input-group-addon"><i class="icon-plus"></i></a>
+                <span class="input-icon"><i class="fas fa-search"></i></span>
+                <a href="#" class="input-group-addon"><i class="fas fa-plus"></i></a>
             </div>
         </div>
     </div>
@@ -70,7 +70,7 @@ Form input with an illustrative icon and **button add-on**.
         <div class="col-xs-12 col-sm-8">
             <div class="input-group">
                 <input type="text" class="form-control" id="input4">
-                <span class="input-icon"><i class="icon-search"></i></span>
+                <span class="input-icon"><i class="fas fa-search"></i></span>
                 <div class="input-group-btn">
                     <button type="button" class="btn btn-default">Button</button>
                 </div>

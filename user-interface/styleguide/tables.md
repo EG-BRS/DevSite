@@ -94,10 +94,10 @@ Each row can have a context menu.
                     <td>Cell 1</td>
                     <td>Cell 2</td>
                     <td class="panel-table-button">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-options"></i></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-ellipsis-h"></i></a>
                         <ul class="dropdown-menu dropdown-menu-right">
-                            <li class="disabled"><a href="#" class="disabled"><i class="icon-forward"></i> Go to</a></li>
-                            <li><a href="#"><i class="icon-delete"></i> Delete</a></li>
+                            <li class="disabled"><a href="#" class="disabled"><i class="fas fa-arrow-right"></i> Go to</a></li>
+                            <li><a href="#"><i class="fas fa-trash"></i> Delete</a></li>
                             <li class="dropdown-function">
                                 <div class="dropdown-form">
                                     <label class="control-label">Betaler:</label>
@@ -105,7 +105,7 @@ Each row can have a context menu.
                                         <div class="input-group">
                                             <input class="form-control input-sm">
                                             <a href="#" class="input-group-addon">
-                                                <i class="icon-plus"></i>
+                                                <i class="fas fa-plus"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -182,7 +182,7 @@ In case of checkboxes or radio buttons in tables, you do not need to apply cell-
         <tbody>
             <tr>
                 <td>
-                    <button class="btn-unstyled"><i class="icon-chevron-down"></i></button>
+                    <button class="btn-unstyled"><i class="fas fa-chevron-up"></i></button>
                 </td>
                 <td>Cell 1</td>
                 <td>Cell 2</td>

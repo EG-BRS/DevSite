@@ -45,10 +45,10 @@ Examples:
 
 ```markup
  <div class="btn-group">
-    <button class="btn btn-default"><i class="icon-backward"></i></button>
-    <button class="btn btn-default"><i class="icon-play"></i></button>
-    <button class="btn btn-default"><i class="icon-pause"></i></button>
-    <button class="btn btn-default"><i class="icon-forward"></i></button>
+    <button class="btn btn-default"><i class="fas fa-arrow-left"></i></button>
+    <button class="btn btn-default"><i class="fas fa-play-circle"></i></button>
+    <button class="btn btn-default"><i class="fas fa-pause-circle"></i></button>
+    <button class="btn btn-default"><i class="fas fa-arrow-right"></i></button>
 </div>
 ```
 
@@ -59,16 +59,16 @@ Examples:
 ```markup
 <div class="btn-group btn-group-justified">
     <div class="btn-group">
-        <button class="btn btn-default"><i class="icon-backward"></i></button>
+        <button class="btn btn-default"><i class="fas fa-arrow-left"></i></button>
     </div>
     <div class="btn-group">
-        <button class="btn btn-default"><i class="icon-play"></i></button>
+        <button class="btn btn-default"><i class="fas fa-play-circle"></i></button>
     </div>
     <div class="btn-group">
-        <button class="btn btn-default"><i class="icon-pause"></i></button>
+        <button class="btn btn-default"><i class="fas fa-pause-circle"></i></button>
     </div>
     <div class="btn-group">
-        <button class="btn btn-default"><i class="icon-forward"></i></button>
+        <button class="btn btn-default"><i class="fas fa-arrow-right"></i></button>
     </div>
 </div>
 ```
@@ -77,7 +77,7 @@ Same effect with `a` elements:
 
 ```markup
 <div class="btn-group btn-group-justified">
-    <a href="#" class="btn btn-default"><i class="icon-backward"></i></a>
+    <a href="#" class="btn btn-default"><i class="fas fa-arrow-left"></i></a>
     ...
 </div>
 ```

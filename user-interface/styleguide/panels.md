@@ -37,11 +37,11 @@ A panel can have a context menu in the header along with shortcut buttons.
     <header class="panel-heading">
         <h2 class="panel-title">[Panel title]</h2>
         <ul class="panel-menu">
-            <li><a href="#" title="Rediger" class="toggle-editform"><span class="icon-edit"></span></a></li>
-            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Funktioner"><i class="icon-options"></i></a>
+            <li><a href="#" title="Rediger" class="toggle-editform"><span class="fas fa-edit"></span></a></li>
+            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Funktioner"><i class="fas fa-ellipsis-h"></i></a>
                 <ul class="dropdown-menu dropdown-menu-right">
-                    <li class="disabled"><a href="#"><i class="icon-save"></i> Gem</a></li>
-                    <li><a href="#" class="toggle-editform"><i class="icon-edit"></i> Rediger</a></li>
+                    <li class="disabled"><a href="#"><i class="fas fa-save"></i> Gem</a></li>
+                    <li><a href="#" class="toggle-editform"><i class="fas fa-edit"></i> Rediger</a></li>
                 </ul>
             </li>
         </ul>

@@ -12,8 +12,8 @@ Standard dropdown:
 <div class="dropdown">
     <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Dropdown toggle</button>
     <ul class="dropdown-menu">
-        <li><a href="#"><i class="icon-edit"></i> Edit rule</a></li>
-        <li><a href="#"><i class="icon-delete"></i> Delete rule</a></li>
+        <li><a href="#"><i class="fas fa-edit"></i> Edit rule</a></li>
+        <li><a href="#"><i class="fas fa-trash"></i> Delete rule</a></li>
     </ul>
 </div>
 ```
@@ -24,8 +24,8 @@ If using in the right side of the screen, add `dropdown-menu-right`:
  <div class="dropdown">
     <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Dropdown toggle (right)</button>
     <ul class="dropdown-menu dropdown-menu-right">
-        <li><a href="#"><i class="icon-edit"></i> Edit rule</a></li>
-        <li><a href="#"><i class="icon-delete"></i> Delete rule</a></li>
+        <li><a href="#"><i class="fas fa-edit"></i> Edit rule</a></li>
+        <li><a href="#"><i class="fas fa-trash"></i> Delete rule</a></li>
     </ul>
 </div>
 ```

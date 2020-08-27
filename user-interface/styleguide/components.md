@@ -72,7 +72,7 @@ vCards is a digital contact card. Visually we try to illustrate that.
     <div class="vcard-body">
         <h4 class="vcard-heading">John Doe</h4>
         <div class="vcard-data">
-            <div class="vcard-data-icon"><i class="icon-place"></i></div>
+            <div class="vcard-data-icon"><i class="fas fa-map-marker-alt"></i></div>
             <div>Streat road 2</div>
             <div>Placename</div>
             <div>
@@ -82,7 +82,7 @@ vCards is a digital contact card. Visually we try to illustrate that.
             <div>Country</div>
         </div>
         <div class="vcard-data">
-            <div class="vcard-data-icon"><i class="icon-phone"></i></div>
+            <div class="vcard-data-icon"><i class="fas fa-phone"></i></div>
             <div>
                 <span>Work: </span>
                 <a class="link-muted" href="tel:+55545672">+55545672</a>
@@ -93,7 +93,7 @@ vCards is a digital contact card. Visually we try to illustrate that.
             </div>
         </div>
         <div class="vcard-data">
-            <div class="vcard-data-icon"><i class="icon-email"></i></div>
+            <div class="vcard-data-icon"><i class="fas fa-envelope"></i></div>
             <div>
                 <span>Direct: </span>
                 <a class="link-muted" href="mailto:john@example.com">john@example.com</a>
@@ -113,7 +113,7 @@ Used in list of vouchers and files with preview. The list scrolls horizontally. 
 <div class="file-slider">
     <div class="file-container dropzone-item">
         <div class="text-muted text-center">
-            <div><span class="icon-upload"></span></div>
+            <div><span class="fas fa-upload"></span></div>
             <div>Upload eller træk nye bilag her til</div>
         </div>
     </div>
@@ -123,7 +123,7 @@ Used in list of vouchers and files with preview. The list scrolls horizontally. 
             <div class="preview-loading" title="Henter..."></div>
         </div>
         <div class="file-text">Electronicinvoice (2).xml</div>
-        <div class="file-actions"><span class="icon-delete"></span></div>
+        <div class="file-actions"><span class="fas fa-trash"></span></div>
     </div>
     <div class="file-container">
         <div class="file-preview">
@@ -131,7 +131,7 @@ Used in list of vouchers and files with preview. The list scrolls horizontally. 
             <div class="preview-loading" title="Henter..." style="display: none;"></div>
         </div>
         <div class="file-text">Kreditnota 037128175 fra Bygma Aabenraa.xml</div>
-        <div class="file-actions"><span class="icon-delete"></span></div>
+        <div class="file-actions"><span class="fas fa-trash"></span></div>
     </div>
 </div>
 ```

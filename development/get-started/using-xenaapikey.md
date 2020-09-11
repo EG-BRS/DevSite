@@ -4,6 +4,11 @@ description: Essentials on Xena API Keys integration.
 
 # Using Xena API Key
 
+{% hint style="danger" %}
+**API-keys are deprecated.**   
+We will remove the possibility to create new keys at the end of 2022 and stop support in 2023
+{% endhint %}
+
 ## Creating Xena API keys
 
 After you login, enter the Company tab -&gt; API-keys

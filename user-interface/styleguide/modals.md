@@ -34,6 +34,18 @@ An action or feature that can be handled in a modal popup. Always provide option
 Do not use modals for very complex tasks; they can be difficult to handle on smaller devices.
 {% endhint %}
 
+## Buttons in footer
+
+By seperating them, you can have multiple buttons in the modal footer. Standard behavior is buttons aligning to the right. Look at the following example code on how to have one or more buttons aligning to left:
+
+![A modal footer with both delete, cancel and save buttons.](../../.gitbook/assets/modal-buttons-in-both-sides.png)
+
+```markup
+<button type="button" class="btn btn-link">Cancel</button>
+<button type="button" class="btn btn-primary">Save</button>
+<button type="button" class="btn btn-danger pull-left">Delete</button>
+```
+
 ## Critical information modals
 
 Example use case: The user initiated a delete function. You can use a modal popup to ask the user to confirm this destructive action. Use a red button to signal caution.

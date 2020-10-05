@@ -440,7 +440,7 @@ If true an ordertask will be created.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="OrderNumber" type="integer" %}
-This should be null. Only set this if you know what you are doing! This can be relavant if the order is born with a number in some other system \(e.g. a webshop\).
+This should be null. Only set this if you know what you are doing! This can be relevant if the order is born with a number in some other system \(e.g. a webshop\).
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="ProjectId" type="integer" %}
